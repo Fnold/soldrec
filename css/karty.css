@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+form a {
+    text-decoration: none;
+}
+
+main {
+    height: 30vh;
+}
+
+article {
+    min-height: 60vh;
+}
+
+section article div h4, h3, h2 {
+    text-align: center;
+}
+
+.updateimg {
+    width: 100%;
+}
+
+#syntaxdiv {
+    width: 60%;
+    margin: 0 auto;
+}
+
+code {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 110%;
+}
+
+.codeA {
+    color: crimson;
+}
+
+.codeB {
+    color: turquoise;
+}
+
+.codeC {
+    color: gold;
+}
+
+.codeD{
+    color: rgb(0, 255, 0);
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+form h3 {
+    color: rgb(191, 190, 223);
+    text-shadow: 0 1px 25px white;
+}
+
+form div {
+    padding-left: 1vw;
+}
+
+#line {
+    border-left: 2px solid rgb(66, 61, 85);
+}
+
+input {
+    background-color: rgb(41, 38, 53);
+    border: 3px solid rgb(23, 27, 34);
+    padding: 10px;
+    width: 400px;
+    height: 40px;
+    font-size: 1.2rem;
+    margin: 20px 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding-bottom: 20px;
+}
+
+.cards a, input {
+    border-radius: 8px;
+}
+
+.cards span {
+    display: none;
+}
+
+.cards img {
+    width: 260px;
+    box-shadow: 0 0 10px 1px rgb(123, 123, 128);
+    overflow-x: scroll;
+    border-radius: 8px;
+    z-index: 0;
+    transition: 0.1s;
+    animation: fade_in .5s ease;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.cards img:hover {
+    box-shadow: 0 0 15px 1px rgba(255, 216, 0, 1);
+    transition: 0.1s;
+}
+
+@keyframes fade_in {
+    0% {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+@media screen and (max-width:925px) {
+    #line{
+        border-left: none;
+    }
+    #syntaxdiv {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:715px) {
+    input {
+        margin: 20px 0;
+    }
+    #syntaxdiv {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:430px) {
+    input {
+        width: 300px;
+    }
+    #syntaxdiv {
+        width: 95%;
+        margin: 0 auto;
+    }
+}

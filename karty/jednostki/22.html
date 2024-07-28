@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=~~, initial-scale=1.0">
+    <title id="site_title"></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/card-info.css">
+    <link rel="stylesheet" href="../../css/random-card.css">
+    <link rel="icon" href="../../assets/favicon.ico">
+</head>
+
+<body>
+    <div>
+        <div id="header-mobile">
+            <img src="../../assets/close.png" class="close-img" onclick="mobile_menu_close()" alt="Zamknij">
+            <div>
+                <h2>SOLDREC</h2>
+                <ul>
+                    <li><a href="../../karty">Karty</a></li>
+                    <li><a href="../../zasady">Zasady</a></li>
+                    <li><a href="../../aktualnosci">Aktualności</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>INFORMACJE</h2>
+                <ul>
+                    <li><a href="../../projekt">O Projekcie</a></li>
+                    <li><a href="../../kontakt">Kontakt</a></li>
+                </ul>
+            </div>
+            <div onclick="random_card()">
+                <h2>LOSOWA KARTA</h2>
+                <ul>
+                    <li><img src="../../assets/random.png" id="random_mobile"></li>
+                </ul>
+            </div>
+        </div>
+        <header class="header">
+            <a href="../../karty"><img src="../../assets/logo.png" alt="SOLDREC" id="logoimg"></a>
+            <ul>
+                <li><h2><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3227539990" id="graj" target="_blank"><i>GRAJ TERAZ</i></a></h2></li>
+                <li><a href="../../karty">Karty</a></li>
+                <li><a href="../../aktualnosci">Aktualności</a></li>
+            </ul>
+            <img src="../../assets/menu.png" alt="menu" class="menu-button" onclick="mobile_menu_open()">
+        </header>
+        <main style="background-image: url(../../assets/cards/latest/jednostki/22.png) !important;"></main>
+
+        <a id="card_random" onclick="random_card()">
+            <img src="../../assets/random.png" class="random">
+        </a>
+
+        <section>
+            <noscript><h1>BŁĄD: JAVASCRIPT WYŁĄCZONY/NIE DZIAŁA</h1></noscript>
+            <article>
+                <img id="card_image">
+                <div class="card-info">
+                    <div>
+                        <b><p id="card_title"></p></b>
+                        <abbr id="card_cost_info"><p id="card_cost"></p></abbr>
+                    </div>
+                    <div>
+                        <p id="card_type"></p>
+                    </div>
+                    <div>
+                        <span id="card_subtype"></span>
+                    </div>
+                    <div id="card_stats">
+                        <p>
+
+                        </p>
+                    </div>
+                    <div>
+                        <p id="card_flavor">
+
+                        </p>
+                    </div>
+                    <div>
+                        <p id="card_author">
+
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <a onclick="latest()" id="latest_selector"></a>
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <footer>
+            <div>
+                <h3>SOLDREC</h3>
+                <ul>
+                    <li><p><a href="../../karty">Karty</a></p></li>
+                    <li><p><a href="../../zasady">Zasady</a></p></li>
+                    <li><p><a href="../../aktualnosci">Aktualności</a></p></li>
+                </ul>
+            </div>
+            <div>
+                <h3>INFORMACJE</h3>
+                <ul>
+                    <li><p><a href="../../projekt">O Projekcie</a></p></li>
+                    <li><p><a href="../../kontakt">Kontakt</a></p></li>
+                </ul>
+            </div>
+            <div>
+                <p>™ & © 2023-2024 Autorzy projektu SOLDREC. Wszelkie prawa zastrzeżone. Wszystkie treści audio, wizualne i tekstowe na tej stronie (w tym wszystkie nazwy, znaki, obrazy, historie, znaki towarowe i logo) są chronione znakami towarowymi, prawami autorskimi i innymi prawami własności intelektualnej należącymi ekskluzywnie do ich oryginalnych autorów lub ich spółek zależnych, licencjodawców, licencjobiorców, dostawców i kont.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="../../js/mobile-menu.js"></script>
+    <script src="../../js/random-card.js"></script>
+</body>
+
+<script type="text/javascript">
+    function latest() {
+        const card_title = "Trójkąt Naukowy";
+        const site_title = card_title;
+        const card_cost = "7M";
+        const card_cost_info = "7 Many";
+        const card_type = "Jednostka";
+        const card_subtype = `
+            <p>
+            Kler
+            </p>`;
+        const card_stats = `
+            <p>
+            1/7/0/4
+            </p>`;
+        const card_flavor = `
+            <i>
+            Początek końca...
+            </i>`;
+        const card_author = `
+            <i>
+            Ilustracja: Soldik 2020
+            </i>`;
+        document.getElementById("card_title").innerHTML = card_title;
+        document.getElementById("site_title").innerHTML = site_title;
+        document.getElementById("card_cost").innerHTML = card_cost;
+        document.getElementById("card_cost_info").title = card_cost_info;
+        document.getElementById("card_type").innerHTML = card_type;
+        document.getElementById("card_subtype").innerHTML = card_subtype;
+        document.getElementById("card_stats").innerHTML = card_stats;
+        document.getElementById("card_flavor").innerHTML = card_flavor;
+        document.getElementById("card_author").innerHTML = card_author;
+        document.getElementById("card_image").src = "../../assets/cards/latest/jednostki/22.png";
+        document.getElementById("card_image").alt = card_title;
+        document.getElementById("latest_selector").innerHTML = `&gt;<u>Najnowsza</u>`;
+    }
+    document.addEventListener("DOMContentLoaded", latest);
+</script>
+
+</html>

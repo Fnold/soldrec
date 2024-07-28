@@ -1,0 +1,27 @@
+.back-to-top {
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    right: 4.75vw;
+    bottom: 11vh;
+    bottom: 100px;
+    padding: 5px;
+    opacity: 0;
+    display: block;
+    transition: 0.5s;
+}
+
+.back-to-top:hover {
+    filter: drop-shadow(0 0 10px #ffffff);
+}
+
+.show {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 1000px) {
+    .back-to-top {
+        display: none;
+    }
+}

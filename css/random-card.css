@@ -1,0 +1,22 @@
+.random {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 4.55vw;
+    bottom: 11vh;
+    padding: 5px;
+    cursor: pointer;
+    bottom: 100px;
+    filter: drop-shadow(0 0 0 #ffffff);
+    display: none;
+    transition: 0.5s;
+}
+
+.random_database {
+    position: fixed !important;
+}
+
+.random:hover, .random_database:hover {
+    filter: drop-shadow(0 0 15px #ffffff);
+    transition: 0.5s;
+}
