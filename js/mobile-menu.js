@@ -5,42 +5,43 @@ function animateElement(element, keyframes, options) {
 }
 
 async function mobile_menu_open() {
-    document.querySelector('.menu-button').classList.add('hidden');
-    document.getElementById('header-mobile').classList.add('visible');
-    await animateElement(document.getElementById('header-mobile'), [
+    document.querySelector('.menu-button').style.display = "none";
+    document.getElementById('header-mobile').style.display = "block";
+    await animateElement(document.getElementById('header-mobile'),[
         {
-            transform: 'translateX(100%)',
-            opacity: '0'
+            opacity: '0',
+            transform: 'translate(100%)'
         },
         {
-            transform: 'translateX(0)',
-            opacity: '1'
+            opacity: '1',
+            transform: 'translate(0)'
         }
-    ], {
-        duration: 150,
+    ],  {
         easing: 'ease-out',
-        fill: 'forwards'
+        fill: 'forwards',
+        duration: 150,
     });
 }
 
 async function mobile_menu_close() {
-    await animateElement(document.getElementById('header-mobile'), [
+    await animateElement(document.getElementById('header-mobile'),[
         {
-            transform: 'translateX(0)',
-            opacity: '1'
+            opacity: '1',
+            transform: 'translate(0)'
         },
         {
-            transform: 'translateX(100%)',
-            opacity: '0'
+            opacity: '0',
+            transform: 'translate(100%)'
         }
-    ], {
-        duration: 95,
+    ],  {
         easing: 'ease-in',
-        fill: 'forwards'
+        fill: 'forwards',
+        duration: 95
     });
-
     setTimeout(() => {
-        document.querySelector('.menu-button').classList.remove('hidden');
-        document.getElementById('header-mobile').classList.remove('visible');
-    }, 0);
+        document.querySelector('.menu-button').style.display = "block";
+        document.getElementById('header-mobile').style.display = "none";
+    },
+    0
+    );
 }

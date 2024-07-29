@@ -7,12 +7,9 @@ window.onresize = window.onload = function() {
 }
 
 function random_card() {
-    const akcja_or_jednostka = Math.round(Math.random());
-    if (akcja_or_jednostka == 1) {
-        const random_page = "/soldrec/karty/akcje/"+(Math.floor(Math.random() * (144 - 1 +1)) + 1); // 144 = number of cards of type AKCJE
-        window.location.href = random_page;
+    if ((Math.round(Math.random())) == 1) {
+        window.location.href = "/soldrec/karty/akcje/"+(Math.floor(Math.random() * (144 - 1 +1)) + 1); // 144 = number of cards of type AKCJE;
     } else {
-        const random_page = "/soldrec/karty/jednostki/"+(Math.floor(Math.random() * (106 - 1 + 1)) + 1); // 106 = number of cards of type JEDNOSTKI
-        window.location.href = random_page;
+        window.location.href = "/soldrec/karty/jednostki/"+(Math.floor(Math.random() * (106 - 1 + 1)) + 1); // 106 = number of cards of type JEDNOSTKI;
     }
 }
