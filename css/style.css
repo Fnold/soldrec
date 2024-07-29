@@ -28,6 +28,7 @@ header {
     z-index: 1;
     width: 100%;
     height: auto;
+    min-height: 64px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(2px);
     display: flex;
@@ -38,8 +39,7 @@ header {
 }
 
 header img {
-    width: 80px;
-    border-radius: 25px;
+    width: 64px;
     padding: 10px;
 }
 
@@ -165,8 +165,7 @@ header ul a:hover::before {
 .menu-button {
     box-sizing: content-box;
     display: none;
-    width: 50px;
-    padding: 20px
+    padding: 5px 8px 8px;
 }
 
 .hidden {
@@ -240,7 +239,7 @@ footer ul li a:hover {
     width: 500px;
     border-radius: 0;
     padding-top: 1.5vh;
-}
+}   
 
 @media screen and (max-width:1000px) {
     .menu-button {
@@ -270,5 +269,7 @@ footer ul li a:hover {
     #logoimg {
         height: 70px;
         width: 310px;
+        padding-top: 12px;
+        padding-bottom: 10px;
     }
 }
