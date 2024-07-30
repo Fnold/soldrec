@@ -29,7 +29,7 @@ article {
     min-height: 70vh;
 }
 
-article img {
+#card_image {
     width: 400px;
     margin: 20px 0;
     background-color: rgb(0, 0, 0);
@@ -54,7 +54,8 @@ article img {
     min-width: 401px;
     max-width: 900px;
     padding: 20px 15px;
-    margin: 0;
+    margin-top: 16px;
+    margin-bottom: 16px;
     border-radius: 16px;
     border: 2px solid rgb(31, 31, 31);
     overflow: hidden;
@@ -64,6 +65,7 @@ article img {
     animation-duration: 0.5s;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
+    transition: height 1s linear;
 }
 
 @keyframes background_animation {
@@ -116,16 +118,56 @@ article img {
     display: flex;
 }
 
-.card-info div:last-child {
+.card-info div:nth-last-child(1) {
+    justify-content: space-between;
+    display: flex;
+}
+
+.card-info div:nth-last-child(2) {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     justify-content: space-between;
     display: flex;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a:last-child {
+    margin-left: 192px;
+}
+
+nav abbr {
+    cursor: pointer !important;
+}
+
+#previous_card {
+    margin-top: 12px;
+    margin-bottom: -12px;
+    height: 56px;
+    width: 56px;
+    transition: 0.4s;
+}
+
+#next_card {
+    margin-top: 12px;
+    margin-bottom: -12px;
+    height: 56px;
+    width: 56px;
+    transition: 0.4s;
+    rotate: 180deg;
+}
+
+#previous_card:hover, #next_card:hover {
+    filter: drop-shadow(0 0 10px rgba(255, 245, 235, 1));
+}
+
 div p {
     padding: 5px 7.5px;
-    font-size: 20px;
+    font-size: 19px;
     line-height: 125%;
 }
 
@@ -145,6 +187,8 @@ div p {
 @media screen and (max-width:500px) {
     .card-info {
         resize: none;
+        margin-top: 0px;
+        margin-bottom: 16px;
     }
     .card-info div {
         width: auto;

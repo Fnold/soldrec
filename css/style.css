@@ -29,7 +29,8 @@ header {
     width: 100%;
     height: auto;
     min-height: 64px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.625);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.625);
     backdrop-filter: blur(2px);
     display: flex;
     justify-content: space-between;
