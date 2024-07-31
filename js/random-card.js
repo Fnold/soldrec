@@ -1,5 +1,5 @@
 window.onresize = window.onload = function() {
-    if (innerWidth >= 1000) {
+    if (innerWidth > 1065) {
         document.querySelector('.random').style.display = "block";
     } else {
         document.querySelector('.random').style.display = "none";

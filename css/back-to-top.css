@@ -5,7 +5,7 @@
     right: 4.75vw;
     bottom: 11vh;
     bottom: 100px;
-    padding: 5px;
+    padding: 4px;
     opacity: 0;
     display: block;
     transition: 0.5s;
@@ -20,7 +20,13 @@
     transition: 0.5s;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width:1870px) {
+    .back-to-top {
+        right: 8vw;
+    }
+}
+
+@media screen and (max-width: 1065px) {
     .back-to-top {
         display: none;
     }

@@ -4,7 +4,7 @@
     position: absolute;
     left: 4.55vw;
     bottom: 11vh;
-    padding: 5px;
+    padding: 4px;
     cursor: pointer;
     bottom: 100px;
     filter: drop-shadow(0 0 0 #ffffff);
@@ -19,4 +19,16 @@
 .random:hover, .random_database:hover {
     filter: drop-shadow(0 0 15px #ffffff);
     transition: 0.5s;
+}
+
+@media screen and (max-width:1870px) {
+    .random {
+        left: 8vw ;
+    }
+}
+
+@media screen and (max-width:1486px) {
+    .random {
+        left: 8.5vw;
+    }
 }
