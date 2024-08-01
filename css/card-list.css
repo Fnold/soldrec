@@ -10,8 +10,8 @@ main {
     height: 30vh;
 }
 
-article {
-    min-height: 60vh;
+section {
+    min-height: 70vh;
 }
 
 section article div h4, h3, h2 {
@@ -22,8 +22,8 @@ section article div h4, h3, h2 {
     width: 100%;
 }
 
-#syntaxdiv {
-    width: 60%;
+#syntax {
+    width: 45%;
     margin: 0 auto;
 }
 
@@ -47,6 +47,10 @@ code {
 
 .codeD{
     color: rgb(0, 255, 0);
+}
+
+.codeE{
+    color: rgb(255, 0, 255);
 }
 
 h1 {
@@ -76,6 +80,12 @@ form div {
     border-left: 2px solid rgb(66, 61, 85);
 }
 
+#searchbox {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
 input {
     background-color: rgb(41, 38, 53);
     border: 3px solid rgb(23, 27, 34);
@@ -84,6 +94,21 @@ input {
     height: 40px;
     font-size: 1.2rem;
     margin: 20px 20px;
+}
+
+#search_clear {
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    right: 6.5%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgb(86, 81, 105);
+    font: 18px monospace;
+    line-height: 1em;
+    text-align: center;
 }
 
 .cards {
@@ -144,28 +169,19 @@ input {
     #line {
         border-left: none;
     }
-    #syntaxdiv {
+    #syntax {
         width: 90%;
-        margin: 0 auto;
     }
 }
 
 @media screen and (max-width:715px) {
-    input {
-        margin: 20px 0;
-    }
-    #syntaxdiv {
-        width: 95%;
-        margin: 0 auto;
+    #syntax {
+        width: 85%;
     }
 }
 
 @media screen and (max-width:430px) {
-    input {
-        width: 300px;
-    }
-    #syntaxdiv {
-        width: 95%;
-        margin: 0 auto;
+    #syntax {
+        width: 90%;
     }
 }

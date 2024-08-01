@@ -63,8 +63,9 @@
         <article>
             <h1>Archiwum Kart</h1>
             <form onsubmit="return false;">
-                <div>
-                    <input type="text" placeholder="Wyszukaj karty...">
+                <div id="searchbox">
+                    <input type="search" placeholder="Wyszukaj karty..." oninput="search()">
+                    <span onclick="var input = this.previousElementSibling; input.value = ''; input.focus(); search(); document.getElementById('search_clear').style.display = `none`;" id="search_clear">x</span>
                 </div>
                 <div id="line">
                     <h3><a href="syntax" target="_blank">Syntax Wyszukiwania ⓘ</a></h3>
@@ -80,6 +81,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -94,6 +97,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         </span>
@@ -108,6 +113,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         </span>
@@ -122,6 +129,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -136,6 +145,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -150,6 +161,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        
+
                         u:alpha
                         update:alpha
                         </span>
@@ -164,6 +177,8 @@
                         typ:akcjar
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -178,6 +193,8 @@
                         typ:akcjar
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -192,6 +209,8 @@
                         typ:akcjat
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -206,6 +225,8 @@
                         typ:akcjar
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -220,6 +241,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        
+
                         u:alpha
                         update:alpha
                         </span>
@@ -234,6 +257,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha    
                         </span>
@@ -248,6 +273,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         </span>
@@ -262,6 +289,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         </span>
@@ -276,6 +305,8 @@
                         typ:akcjat
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         </span>
@@ -290,6 +321,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+
+                        
                         u:alpha
                         update:alpha   
                         </span>
@@ -304,6 +337,8 @@
                         typ:akcjar
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -318,6 +353,8 @@
                         typ:akcjar
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -332,6 +369,8 @@
                         typ:akcjar
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -346,6 +385,8 @@
                         typ:akcjar
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -360,6 +401,8 @@
                         typ:akcjar
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -374,6 +417,8 @@
                         typ:akcjat
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -388,6 +433,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         </span>
@@ -402,6 +449,8 @@
                         typ:akcjat
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -416,6 +465,8 @@
                         typ:akcjan
                         d:sea
                         domena:sea
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -430,6 +481,8 @@
                         typ:akcjar
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         </span>
@@ -444,6 +497,8 @@
                         typ:akcjat
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         </span>
@@ -458,6 +513,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         </span>
@@ -472,6 +529,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         </span>
@@ -486,6 +545,8 @@
                         typ:akcjat
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -500,6 +561,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        
+
                         u:alpha
                         update:alpha
                         </span>
@@ -514,6 +577,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         </span>
@@ -528,6 +593,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -542,6 +609,8 @@
                         typ:akcjar
                         d:kr
                         domena:kr
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -556,6 +625,8 @@
                         typ:akcjat
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha    
                         </span>
@@ -570,6 +641,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         </span>
@@ -584,6 +657,8 @@
                         typ:akcjat
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha    
                         </span>
@@ -598,6 +673,8 @@
                         typ:akcjat
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         </span>
@@ -612,6 +689,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+
+                        
                         u:alpha
                         update:alpha
                         </span>
@@ -626,6 +705,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         </span>
@@ -640,6 +721,8 @@
                         typ:akcjat
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -654,6 +737,8 @@
                         typ:akcjat
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -668,6 +753,8 @@
                         typ:akcjar
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:soldsea
                         update:soldsea
                         </span>
@@ -682,6 +769,8 @@
                         typ:akcjar
                         d:scr
                         domena:scr
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -696,6 +785,8 @@
                         typ:akcjan
                         d:wpm
                         domena:wpm
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -710,8 +801,10 @@
                         typ:akcjat
                         d:nc
                         domena:nc
+                        a:soldik
+                        artysta:soldik
                         u:alpha
-                        update:alpha    
+                        update:alpha
                         </span>
                     </div>
                 </a>
@@ -724,6 +817,8 @@
                         typ:akcjat
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         </span>
@@ -738,6 +833,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -752,6 +849,8 @@
                         typ:akcjar
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         </span>
@@ -766,6 +865,8 @@
                         typ:akcjan
                         d:dl
                         domena:dl
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -780,6 +881,8 @@
                         typ:akcjar
                         d:sr
                         domena:sr
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -794,6 +897,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         </span>
@@ -808,6 +913,8 @@
                         typ:akcjan
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -822,6 +929,8 @@
                         typ:akcjat
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -836,6 +945,8 @@
                         typ:akcjar
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         </span>
@@ -850,6 +961,8 @@
                         typ:akcjat
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         </span>
@@ -864,6 +977,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -878,6 +993,8 @@
                         typ:akcjan
                         d:bnl
                         domena:bnl
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -892,6 +1009,8 @@
                         typ:akcjat
                         d:bnl
                         domena:bnl
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -906,6 +1025,8 @@
                         typ:akcjan
                         d:bnl
                         domena:bnl
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -920,6 +1041,8 @@
                         typ:akcjan
                         d:mtd
                         domena:mtd
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -934,6 +1057,8 @@
                         typ:akcjat
                         d:wpm
                         domena:wpm
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -948,6 +1073,8 @@
                         typ:akcjat
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha    
                         </span>
@@ -962,6 +1089,8 @@
                         typ:akcjan
                         d:wpm
                         domena:wpm
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -976,6 +1105,8 @@
                         typ:akcjar
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha 
                         </span>
@@ -990,6 +1121,8 @@
                         typ:akcjan
                         d:bnl
                         domena:bnl
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha    
                         </span>
@@ -1004,6 +1137,8 @@
                         typ:akcjan
                         d:sr
                         domena:sr
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1018,6 +1153,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1032,6 +1169,8 @@
                         typ:akcjan
                         d:bnl
                         domena:bnl
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1046,6 +1185,8 @@
                         typ:akcjat
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1060,6 +1201,8 @@
                         typ:akcjan
                         d:sea
                         domena:sea
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1074,6 +1217,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1088,6 +1233,8 @@
                         typ:akcjan
                         d:sr
                         domena:sr
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1102,6 +1249,8 @@
                         typ:akcjat
                         d:sr
                         domena:sr
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1116,6 +1265,8 @@
                         typ:akcjat
                         d:wpm
                         domena:wpm
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1130,6 +1281,8 @@
                         typ:akcjan
                         d:wpm
                         domena:wpm
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1144,6 +1297,8 @@
                         typ:akcjan
                         d:sr
                         domena:sr
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1158,6 +1313,8 @@
                         typ:akcjar
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1172,6 +1329,8 @@
                         typ:akcjar
                         d:kr
                         domena:kr
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1186,6 +1345,8 @@
                         typ:akcjat
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1200,6 +1361,8 @@
                         typ:akcjar
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -1214,6 +1377,8 @@
                         typ:akcjan
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -1228,6 +1393,8 @@
                         typ:akcjan
                         d:sr
                         domena:sr
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1242,6 +1409,8 @@
                         typ:akcjan
                         d:sr
                         domena:sr
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha    
                         </span>
@@ -1256,6 +1425,8 @@
                         typ:akcjat
                         d:dm
                         domena:dm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -1270,6 +1441,8 @@
                         typ:akcjan
                         d:dm
                         domena:dm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -1284,6 +1457,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1298,6 +1473,8 @@
                         typ:akcjan
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -1312,6 +1489,8 @@
                         typ:akcjan
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -1326,6 +1505,8 @@
                         typ:akcjat
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1340,6 +1521,8 @@
                         typ:akcjan
                         d:scr
                         domena:scr
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1354,6 +1537,8 @@
                         typ:akcjan
                         d:sr
                         domena:sr
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1368,6 +1553,8 @@
                         typ:akcjan
                         d:dm
                         domena:dm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -1382,6 +1569,8 @@
                         typ:akcjan
                         d:dm
                         domena:dm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -1396,6 +1585,8 @@
                         typ:akcjan
                         d:dm
                         domena:dm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -1410,6 +1601,8 @@
                         typ:akcjar
                         d:dm
                         domena:dm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         </span>
@@ -1425,6 +1618,8 @@
                         typ:akcjan
                         d:wpm
                         domena:wpm
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1439,6 +1634,8 @@
                         typ:akcjan
                         d:wpm
                         domena:wpm
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1454,6 +1651,8 @@
                         typ:akcjar
                         d:hal
                         domena:hal
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1468,6 +1667,8 @@
                         typ:akcjan
                         d:sr
                         domena:sr
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1482,6 +1683,8 @@
                         typ:akcjar
                         d:wpm
                         domena:wpm
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         </span>
@@ -1496,6 +1699,8 @@
                         typ:akcjan
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1510,6 +1715,8 @@
                         typ:akcjar
                         d:sr
                         domena:sr
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1524,6 +1731,8 @@
                         typ:akcjat
                         d:sr
                         domena:sr
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1538,6 +1747,8 @@
                         typ:akcjar
                         d:sea
                         domena:sea
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1552,6 +1763,8 @@
                         typ:akcjan
                         d:sr
                         domena:sr
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1566,6 +1779,8 @@
                         typ:akcjat
                         d:wpm
                         domena:wpm
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1580,6 +1795,8 @@
                         typ:akcjan
                         d:sea
                         domena:sea
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1594,6 +1811,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1608,6 +1827,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1622,6 +1843,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1636,6 +1859,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1650,6 +1875,8 @@
                         typ:akcjan
                         d:sr
                         domena:sr
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1664,6 +1891,8 @@
                         typ:akcjar
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1678,6 +1907,8 @@
                         typ:akcjat
                         d:bnl
                         domena:bnl
+                        a:magnus
+                        artysta:magnus
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1692,6 +1923,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1706,6 +1939,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1720,6 +1955,8 @@
                         typ:akcjat
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1734,6 +1971,8 @@
                         typ:akcjan
                         d:sea
                         domena:sea
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1748,6 +1987,8 @@
                         typ:akcjan
                         d:sea
                         domena:sea
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1762,6 +2003,8 @@
                         typ:akcjan
                         d:sr
                         domena:sr
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1776,6 +2019,8 @@
                         typ:akcjat
                         d:sea
                         domena:sea
+                        a:soldik
+                        artysta:soldik
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1790,6 +2035,8 @@
                         typ:akcjan
                         d:sea
                         domena:sea
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1804,6 +2051,8 @@
                         typ:akcjar
                         d:sr
                         domena:sr
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1818,6 +2067,8 @@
                         typ:akcjas
                         d:sr
                         domena:sr
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1832,6 +2083,8 @@
                         typ:akcjas
                         d:sr
                         domena:sr
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1846,6 +2099,8 @@
                         typ:akcjan
                         d:sr
                         domena:sr
+                        a:magnus
+                        artysta:magnus
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1860,6 +2115,8 @@
                         typ:akcjan
                         d:sr
                         domena:sr
+                        a:magnus
+                        artysta:magnus
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1874,6 +2131,8 @@
                         typ:akcjat
                         d:sea
                         domena:sea
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1888,6 +2147,8 @@
                         typ:akcjan
                         d:sr
                         domena:sr
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         </span>
@@ -1902,6 +2163,8 @@
                         typ:akcjat
                         d:bnl
                         domena:bnl
+                        a:magnus
+                        artysta:magnus
                         u:naprawa
                         update:naprawa
                         </span>
@@ -1916,6 +2179,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:naprawa
                         update:naprawa
                         </span>
@@ -1930,6 +2195,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:naprawa
                         update:naprawa
                         </span>
@@ -1944,6 +2211,8 @@
                         typ:akcjan
                         d:sea
                         domena:sea
+                        a:fnold
+                        artysta:fnold
                         u:naprawa
                         update:naprawa
                         </span>
@@ -1958,6 +2227,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:naprawa
                         update:naprawa
                         </span>
@@ -1972,6 +2243,8 @@
                         typ:akcjan
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:naprawa
                         update:naprawa
                         </span>
@@ -1986,6 +2259,8 @@
                         typ:akcjat
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:naprawa
                         update:naprawa
                         </span>
@@ -2000,6 +2275,8 @@
                         typ:akcjar
                         d:sea
                         domena:sea
+                        a:fnold
+                        artysta:fnold
                         u:naprawa
                         update:naprawa
                         </span>
@@ -2014,6 +2291,8 @@
                         typ:akcjan
                         d:sea
                         domena:sea
+                        a:fnold
+                        artysta:fnold
                         u:naprawa
                         update:naprawa
                         </span>
@@ -2028,6 +2307,8 @@
                         typ:akcjan
                         d:bnl
                         domena:bnl
+                        a:fnold
+                        artysta:fnold
                         u:naprawa
                         update:naprawa
                         </span>
@@ -2055,6 +2336,8 @@
                         typ:jednostka
                         d:scr
                         domena:scr
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         5/3/1/4
@@ -2072,6 +2355,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         7/3/7/4
@@ -2089,6 +2374,8 @@
                         typ:jednostka
                         d:bnl
                         domena:bnl
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         1/3/3/7
@@ -2106,6 +2393,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         0/4/3/8
@@ -2123,6 +2412,8 @@
                         typ:jednostka
                         d:bnl
                         domena:bnl
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         4/3/4/7
@@ -2140,6 +2431,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         0/0/3/9
@@ -2157,6 +2450,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         1/1/1/1
@@ -2174,6 +2469,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         3/0/4/6
@@ -2191,6 +2488,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         1/2/3/4
@@ -2208,6 +2507,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         10/10/10/10
@@ -2225,6 +2526,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         2/1/3/7
@@ -2242,6 +2545,8 @@
                         typ:jednostka
                         d:dm
                         domena:dm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         6/0/4/2
@@ -2259,6 +2564,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         7/3/3/3
@@ -2276,6 +2583,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         8/1/0/2
@@ -2293,6 +2602,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         5/4/4/4
@@ -2310,6 +2621,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         7/1/1/1
@@ -2327,6 +2640,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         4/3/2/1
@@ -2344,6 +2659,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         2/2/2/2
@@ -2361,6 +2678,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         0/5/3/4
@@ -2378,6 +2697,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         3/6/3/3
@@ -2395,6 +2716,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         0/8/4/2
@@ -2412,6 +2735,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         1/7/0/4
@@ -2429,6 +2754,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         0/6/4/5
@@ -2446,6 +2773,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         5/6/5/5
@@ -2463,6 +2792,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:magnus
+                        artysta:magnus
                         u:alpha
                         update:alpha
                         7/9/0/1
@@ -2480,6 +2811,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         3/3/3/3
@@ -2497,6 +2830,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         2/4/5/2
@@ -2514,6 +2849,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         4/1/9/8
@@ -2531,6 +2868,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         5/5/7/5
@@ -2548,6 +2887,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+
+
                         u:alpha
                         update:alpha
                         3/5/6/4
@@ -2565,6 +2906,8 @@
                         typ:jednostka
                         d:hal
                         domena:hal
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         2/3/4/3
@@ -2582,6 +2925,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         0/5/7/3
@@ -2599,6 +2944,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         0/0/9/4
@@ -2618,6 +2965,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         4/0/3/4
@@ -2637,6 +2986,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         5/7/5/3
@@ -2656,6 +3007,8 @@
                         typ:jednostka
                         d:dm
                         domena:dm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         4/0/5/9    
@@ -2675,6 +3028,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         4/6/6/7
@@ -2694,6 +3049,8 @@
                         typ:jednostka
                         d:bnl
                         domena:bnl
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         0/2/0/2   
@@ -2713,6 +3070,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         6/1/8/4
@@ -2732,6 +3091,8 @@
                         typ:jednostka
                         d:ww
                         domena:ww
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         3/7/7/2
@@ -2749,6 +3110,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         4/4/4/4
@@ -2766,6 +3129,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         5/5/5/5
@@ -2783,6 +3148,8 @@
                         typ:jednostka
                         d:nc
                         domena:nc
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         7/0/7/3
@@ -2802,6 +3169,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         2/3/3/3
@@ -2821,6 +3190,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         3/3/5/5
@@ -2840,6 +3211,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         3/3/3/3
@@ -2857,6 +3230,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         2/0/2/1
@@ -2876,6 +3251,8 @@
                         typ:jednostka
                         d:dm
                         domena:dm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         4/4/4/2
@@ -2893,6 +3270,8 @@
                         typ:jednostka
                         d:hal
                         domena:hal
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         4/2/4/1    
@@ -2912,6 +3291,8 @@
                         typ:jednostka
                         d:nc
                         domena:nc
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         6/0/3/2
@@ -2931,6 +3312,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         3/3/2/3
@@ -2950,6 +3333,8 @@
                         typ:jednostka
                         d:hal
                         domena:hal
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         3/2/3/3
@@ -2969,6 +3354,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         5/5/2/4
@@ -2988,6 +3375,8 @@
                         typ:jednostka
                         d:dm
                         domena:dm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         3/0/3/2
@@ -3005,6 +3394,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         9/0/9/8    
@@ -3022,6 +3413,8 @@
                         typ:jednostka
                         d:gb
                         domena:gb
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         6/6/6/6
@@ -3041,6 +3434,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         2/1/1/2
@@ -3058,6 +3453,8 @@
                         typ:jednostka
                         d:nc
                         domena:nc
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         6/4/6/1
@@ -3077,6 +3474,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         4/3/4/4
@@ -3094,6 +3493,8 @@
                         typ:jednostka
                         d:mtd
                         domena:mtd
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         5/3/5/3    
@@ -3113,6 +3514,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         1/6/1/6    
@@ -3132,6 +3535,8 @@
                         typ:jednostka
                         d:dm
                         domena:dm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         7/4/7/7
@@ -3149,6 +3554,8 @@
                         typ:jednostka
                         d:scr
                         domena:scr
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         3/4/0/4
@@ -3168,6 +3575,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         0/4/4/4
@@ -3187,6 +3596,8 @@
                         typ:jednostka
                         d:dm
                         domena:dm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         9/8/3/2
@@ -3206,6 +3617,8 @@
                         typ:jednostka
                         d:sr
                         domena:sr
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         9/0/0/9
@@ -3225,6 +3638,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         1/1/1/1    
@@ -3244,6 +3659,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         0/8/8/5    
@@ -3261,6 +3678,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         0/10/0/10
@@ -3280,6 +3699,8 @@
                         typ:jednostka
                         d:dm
                         domena:dm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         1/7/5/7
@@ -3299,6 +3720,8 @@
                         typ:jednostka
                         d:dm
                         domena:dm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         10/0/10/5
@@ -3316,6 +3739,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         0/1/0/1
@@ -3335,6 +3760,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         3/9/9/9
@@ -3354,6 +3781,8 @@
                         typ:jednostka
                         d:sr
                         domena:sr
+                        a:fnold
+                        artysta:fnold
                         u:alpha
                         update:alpha
                         8/1/4/1
@@ -3371,6 +3800,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         0/6/4/6
@@ -3388,6 +3819,8 @@
                         typ:jednostka
                         d:ww
                         domena:ww
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         3/7/2/7
@@ -3405,6 +3838,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         2/3/1/3
@@ -3422,6 +3857,8 @@
                         typ:jednostka
                         d:dm
                         domena:dm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         5/1/6/6
@@ -3439,6 +3876,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         0/6/7/7
@@ -3458,6 +3897,8 @@
                         typ:jednostka
                         d:kr
                         domena:kr
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         8/8/0/2
@@ -3475,6 +3916,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         4/3/8/8
@@ -3492,6 +3935,8 @@
                         typ:jednostka
                         d:sea
                         domena:sea
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         7/7/7/7
@@ -3509,6 +3954,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         5/6/7/7
@@ -3528,6 +3975,8 @@
                         typ:jednostka
                         d:dl
                         domena:dl
+                        a:soldik
+                        artysta:soldik
                         u:alpha
                         update:alpha
                         5/4/5/5
@@ -3547,6 +3996,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:soldsea
                         update:soldsea
                         10/5/8/7    
@@ -3566,6 +4017,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:soldsea
                         update:soldsea
                         5/0/5/4
@@ -3583,6 +4036,8 @@
                         typ:jednostka
                         d:hal
                         domena:hal
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         8/8/8/8
@@ -3600,6 +4055,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:soldsea
                         update:soldsea
                         9/9/9/9
@@ -3619,6 +4076,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:soldsea
                         update:soldsea
                         6/0/2/9
@@ -3638,6 +4097,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:soldsea
                         update:soldsea
                         0/5/5/5
@@ -3657,6 +4118,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         6/1/5/6
@@ -3674,6 +4137,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:soldsea
                         update:soldsea
                         0/3/4/4
@@ -3691,6 +4156,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:soldsea
                         update:soldsea
                         4/5/0/5
@@ -3710,6 +4177,8 @@
                         typ:jednostka
                         d:sea
                         domena:sea
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         8/3/7/8   
@@ -3727,6 +4196,8 @@
                         typ:jednostka
                         d:sea
                         domena:sea
+                        a:soldik
+                        artysta:soldik
                         u:soldsea
                         update:soldsea
                         4/0/5/5
@@ -3746,6 +4217,8 @@
                         typ:jednostka
                         d:sea
                         domena:sea
+                        a:fnold
+                        artysta:fnold
                         u:soldsea
                         update:soldsea
                         9/0/10/1
@@ -3765,6 +4238,8 @@
                         typ:jednostka
                         d:kr
                         domena:kr
+                        a:soldik
+                        artysta:soldik
                         u:naprawa
                         update:naprawa
                         4/1/4/4
@@ -3782,6 +4257,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:soldik
+                        artysta:soldik
                         u:naprawa
                         update:naprawa
                         10/0/1/10
@@ -3799,6 +4276,8 @@
                         typ:jednostka
                         d:sv
                         domena:sv
+                        a:fnold
+                        artysta:fnold
                         u:naprawa
                         update:naprawa
                         10/0/0/10
@@ -3816,6 +4295,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:naprawa
                         update:naprawa
                         8/5/5/8
@@ -3833,6 +4314,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:naprawa
                         update:naprawa
                         6/1/4/6
@@ -3850,6 +4333,8 @@
                         typ:jednostka
                         d:sr
                         domena:sr
+                        a:memien
+                        artysta:memien
                         u:naprawa
                         update:naprawa
                         5/4/2/5
@@ -3867,6 +4352,8 @@
                         typ:jednostka
                         d:dl
                         domena:dl
+                        a:soldik
+                        artysta:soldik
                         u:naprawa
                         update:naprawa
                         6/0/1/6
@@ -3884,6 +4371,8 @@
                         typ:jednostka
                         d:wpm
                         domena:wpm
+                        a:soldik
+                        artysta:soldik
                         u:naprawa
                         update:naprawa
                         4/2/3/4
@@ -3903,6 +4392,8 @@
                         typ:jednostka
                         d:dl
                         domena:dl
+                        a:soldik
+                        artysta:soldik
                         u:naprawa
                         update:naprawa
                         6/6/5/2

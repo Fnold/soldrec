@@ -56,9 +56,9 @@
         <img src="assets/arrow.png" class="back-to-top" id="back_to_top">
     </a>
     <section>
-        <article>
+        <article id="syntax">
             <h1>Syntax Wyszukiwania</h1>
-            <div id="syntaxdiv">
+            <div>
             <p><h4>Wyszukiwarka kart SOLDREC posiada wiele ekspresji pozwalających na filtrowanie wyników.</h4></p>
             <p>Oprócz zwykłych nazw kart oraz statystyk jednostek w formacie X/X/X/X, wyszukiwanie kart można jeszcze szerzej filtrować na wiele sposobów.</p>
             <p><h1>Podstawowe ekspresje:</h1></p>
@@ -88,12 +88,19 @@
             <p>Każda karta należy do swojej domeny, podana jest ona na dole jednostek oraz na górze akcji. Za jej pomocą można odróżniać karty i grupować je. Aby wyszukać kartę za pomocą jej domeny należy wyszukać <code class="codeC">d:</code> lub <code class="codeC">domena:</code> poprzedzone odpowiednią domeną.
                 <p>Przykład: <code class="codeC">d:sea</code> wyszuka tylko i wyłącznie karty z domeny SEA.</p>
             </p>
-            <p><h2>Wyszukiwanie kart po aktualizacji ich dodania</h2></p>
+            <p><h2>Wyszukiwanie kart po aktualizacji</h2></p>
             <p>Karty można wyszukiwać po ich aktualizacjach, w których zostały dodane. Aby to zrobić należy wyszukać <code class="codeD">u:</code> lub <code class="codeD">update:</code> poprzedzone odpowiednią aktualizacją:
                 <br><code class="codeD">alpha</code> - Wyszuka tylko karty sprzed jakiejkowiek aktualizacji, z "alphy" gry (2023).
                 <br><code class="codeD">soldsea</code> - Wyszuka tylko karty z aktualizacji The Sold Sea (2024).
                 <br><code class="codeD">naprawa</code> - Wyszuka tylko karty z aktualizacji Naprawa (2024).
                 <p>Przykład: <code class="codeD">u:soldsea</code> wyszuka tylko i wyłącznie karty dodane w aktualizacji The Sold Sea (2024).</p>
+            </p>
+            <p><h2>Wyszukiwanie kart po artystach</h2></p>
+            <p>Karty można wyszukiwać po artystach, którzy wykonali dla karty rysunek. Aby to zrobić należy wyszukać <code class="codeE">a:</code> lub <code class="codeE">artysta:</code> poprzedzone odpowiednim artystą:
+                <br><code class="codeE">fnold</code> - Wyszuka tylko karty narysowane przez Fnold.
+                <br><code class="codeE">soldik</code> - Wyszuka tylko karty narysowane przez Soldik.
+                <br><code class="codeE">magnus</code> - Wyszuka tylko karty narysowane przez Magnus.
+                <p>Przykład: <code class="codeE">a:fnold</code> wyszuka tylko karty zilustrowane przez artystę Fnold.</p>
             </p>
             </div>
         </article>
