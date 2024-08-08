@@ -28,8 +28,8 @@ header {
     width: 100%;
     height: auto;
     min-height: 64px;
-    background-color: rgba(0, 0, 0, 0.625);
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.625);
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
     display: flex;
@@ -45,6 +45,7 @@ header img {
 }
 
 header ul {
+    padding: 8px 0 0 0;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -54,8 +55,8 @@ header ul {
 }
 
 header ul li {
-    padding: 20px 20px 10px 10px;
-    font-size: 1.3em;
+    padding: 0 20px 10px 10px;
+    font-size: 1.2em;
     font-weight: bold;
     position: relative;
     cursor: pointer;
