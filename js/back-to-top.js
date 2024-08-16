@@ -4,4 +4,11 @@ document.addEventListener('scroll', function() {
     }
     else {
     document.getElementById('back_to_top').classList.remove('show');
-    }});
+}});
+
+function ToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+});
+}

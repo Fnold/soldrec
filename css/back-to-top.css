@@ -9,6 +9,7 @@
     opacity: 0;
     display: block;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .back-to-top:hover {
