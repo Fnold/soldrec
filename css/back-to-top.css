@@ -2,7 +2,7 @@
     width: 70px;
     height: 70px;
     position: fixed;
-    right: 4.75vw;
+    right: 4.55vw;
     bottom: 11vh;
     bottom: 100px;
     padding: 4px;
@@ -21,9 +21,9 @@
     transition: 0.5s;
 }
 
-@media screen and (max-width:1870px) {
+@media screen and (max-width:1875px) {
     .back-to-top {
-        right: 8vw;
+        right: 8.5vw;
     }
 }
 

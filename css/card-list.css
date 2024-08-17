@@ -135,7 +135,7 @@ input {
 }
 
 .cards img {
-    width: 260px;
+    width: 333px;
     box-shadow: 0 0 10px 1px rgb(123, 123, 128);
     overflow-x: scroll;
     border-radius: 8px;
