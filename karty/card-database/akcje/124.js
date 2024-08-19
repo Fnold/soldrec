@@ -1,5 +1,5 @@
 function latest() {
-    const card_title = "Raptowńskie Posunięcie";
+    const card_title = "Niespodziewane Wieści";
     const site_title = card_title;
     const card_cost = "3M 15P";
     const card_cost_info = "3 Many i 15 Popularności";

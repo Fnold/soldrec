@@ -22,37 +22,6 @@ section article div h4, h3, h2 {
     width: 100%;
 }
 
-#syntax {
-    width: 45%;
-    margin: 0 auto;
-}
-
-code {
-    background-color: rgba(255, 255, 255, 0.1);
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 110%;
-}
-
-.codeA {
-    color: crimson;
-}
-
-.codeB {
-    color: turquoise;
-}
-
-.codeC {
-    color: gold;
-}
-
-.codeD{
-    color: rgb(0, 255, 0);
-}
-
-.codeE{
-    color: rgb(255, 0, 255);
-}
-
 h1 {
     text-align: center;
     padding: 20px;

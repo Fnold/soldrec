@@ -7,13 +7,13 @@
     bottom: 100px;
     padding: 4px;
     opacity: 0;
+    cursor: pointer;
     display: block;
     transition: 0.5s;
-    cursor: pointer;
 }
 
 .back-to-top:hover {
-    filter: drop-shadow(0 0 10px #ffffff);
+    filter: drop-shadow(0 0 12px #fff);
 }
 
 .show {

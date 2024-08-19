@@ -38,19 +38,19 @@ article {
 }
 
 .card-info {
-    width: 500px;
+    width: 550px;
     min-width: 401px;
     max-width: 900px;
     padding: 20px 15px;
     margin-top: 16px;
     margin-bottom: 16px;
     border-radius: 16px;
-    border: 2px solid rgb(31, 31, 31);
+    border: 3.5px solid rgb(31, 31, 31);
     overflow: hidden;
     resize: horizontal;
     background: linear-gradient(-25deg, rgb(24, 24, 24), rgb(10, 10, 10));
     animation-name: background_animation;
-    animation-duration: 0.5s;
+    animation-duration: 0.55s;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
     transition: height 1s linear;
@@ -93,7 +93,7 @@ article {
 }
 
 .card-info div {
-    border: 1px solid rgb(40, 40, 40);
+    border: 1.525px solid rgb(40, 40, 40);
     width: 100%;
     background-color: rgb(8, 8, 8);
     padding: 5px;
