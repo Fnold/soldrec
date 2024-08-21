@@ -29,7 +29,7 @@ h1 {
 
 form {
     display: flex;
-    padding: 20px;
+    padding: 20px 0 20px 0;
     margin-bottom: 24px;
     flex-wrap: wrap;
     align-items: center;
@@ -38,7 +38,7 @@ form {
     position: sticky !important;
     top: -8px;
     z-index: 1;
-    width: 60%;
+    width: 75%;
     max-width: fit-content;
     margin-inline: auto;
 }
@@ -66,7 +66,7 @@ input {
     background-color: rgb(41, 38, 53);
     border: 3px solid rgb(23, 27, 34);
     padding: 10px;
-    width: 400px;
+    width: 350px;
     height: 40px;
     font-size: 1.2rem;
     margin: 20px 20px;
@@ -104,7 +104,7 @@ input {
 }
 
 .cards img {
-    width: 333px;
+    width: 20rem;
     box-shadow: 0 0 10px 1px rgb(123, 123, 128);
     overflow-x: scroll;
     border-radius: 8px;
@@ -129,19 +129,7 @@ input {
     }
 }
 
-@media screen and (max-width:1870px) {
-    article {
-        width: 60%;
-    }
-}
-
-@media screen and (max-width:1860px) {
-    article {
-        width: 75%;
-    }
-}
-
-@media screen and (max-width:1750px) {
+@media screen and (max-width:1500px) {
     form {
         position: static !important;
     }

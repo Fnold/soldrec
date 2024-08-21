@@ -39,24 +39,18 @@ header {
     top: 0;
 }
 
-header img {
-    width: 64px;
-    padding: 10px;
-}
-
 header ul {
     padding: 8px 0 0 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
     justify-content: right;
     list-style: none;
     position: relative
 }
 
 header ul li {
-    padding: 12px 20px 10px 10px;
-    font-size: 1.2em;
+    padding: 12px 20px 8px 5px;
+    font-size: 1.1rem;
     font-weight: bold;
     position: relative;
     cursor: pointer;
@@ -230,10 +224,10 @@ footer ul li a:hover {
 }
 
 #logoimg {
-    height: 100px;
+    height: 90px;
     width: 500px;
     border-radius: 0;
-    padding-top: 1.5vh;
+    padding: 1.5vh 10px 4px 10px;
 }   
 
 @media screen and (max-width:1065px) {
