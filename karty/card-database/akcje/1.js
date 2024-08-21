@@ -26,6 +26,7 @@ function latest() {
     document.getElementById("card_image").alt = card_title;
     document.getElementById("latest_selector").innerHTML = `&gt;<u>Najnowsza</u>`;
     document.getElementById("alpha_selector").innerHTML = `<u>Alpha</u>`;
+    document.querySelector('meta[property="og:title"]').setAttribute("content", card_title);
 }
 function alpha() {
     const card_title = "Wia Dante Lorme";
