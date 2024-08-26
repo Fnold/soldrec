@@ -144,8 +144,10 @@ document.addEventListener("DOMContentLoaded", latest);
         }]
         },
         options: {
+        clip: false,
         pointRadius: 5,
         pointStyle: 'rectRot',
+        maintainAspectRatio: false,
         plugins: {
             legend: {
                 display: false,
@@ -158,6 +160,9 @@ document.addEventListener("DOMContentLoaded", latest);
             grid: {
                 color: '#404040'
             },
+            ticks: {
+                stepSize: 10
+            }
             },
             x: {
             grid: {
@@ -180,8 +185,10 @@ document.addEventListener("DOMContentLoaded", latest);
         }]
         },
         options: {
+        clip: false,
         pointRadius: 5,
         pointStyle: 'rectRot',
+        maintainAspectRatio: false,
         plugins: {
             legend: {
                 display: false,

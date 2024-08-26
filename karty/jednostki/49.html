@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="../../css/card-info.css">
     <link rel="stylesheet" href="../../css/random-card.css">
     <link rel="icon" href="../../assets/favicon.ico">
+    <style>
+        @media screen and (max-width:1806px) {
+        .random {
+        left: calc(100vw - 98%) !important;
+        }
+        }
+    </style>
 </head>
 
 <body>
@@ -107,14 +114,14 @@
                         </a>
                     </nav>
                 </div>
-                <div>
+                <div id="charts">
                     <div class="chart card-info">
                         <div>
                         <b><p>Frekwencja</p></b>
                         <p class="ob">Grane w: <span id="popularity"></span> wszystkich talii</p>
                         </div>
-                        <div>
-                            <canvas id="chart_popularity"></canvas>
+                        <div class="canvas">
+                            <canvas id="chart_popularity" class="canvas"></canvas>
                         </div>
                     </div>
                     <div class="chart card-info">
@@ -123,7 +130,7 @@
                             <p class="ob">Obecna <abbr title="Delta = (% wygranych meczy z tą kartą) - 50%"><span style="border-bottom: 0.1rem dashed #FCFCFF;">Delta</span></abbr>: <span id="delta"></span></p>
                             </div>
                         <div>
-                            <canvas id="chart_delta"></canvas>
+                            <canvas id="chart_delta" class="canvas"></canvas>
                         </div>
                     </div>
                 </div>

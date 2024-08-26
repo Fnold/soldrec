@@ -54,7 +54,6 @@ article {
     animation-duration: 0.55s;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
-    transition: height 1s linear;
 }
 
 @keyframes background_animation {
@@ -117,6 +116,15 @@ article {
     border-bottom-right-radius: 10px;
     justify-content: space-between;
     display: flex;
+}
+
+#charts {
+    width: 100%;
+    max-width: 475px;
+}
+
+.canvas {
+    min-height: 213px;
 }
 
 .chart {
@@ -215,8 +223,11 @@ div p {
     .card-info div {
         width: auto;
     }
-    .chart div {
-        width: auto;
+    .chart {
+        width: 100% !important;
+    }
+    #charts {
+        padding-bottom: 16px;
     }
     article img {
         width: 95%;
