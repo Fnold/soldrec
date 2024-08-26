@@ -27,6 +27,7 @@ article {
     align-items: center;
     gap: 20px;
     min-height: 70vh;
+    width: 100% !important;
 }
 
 #card_image {
@@ -38,9 +39,9 @@ article {
 }
 
 .card-info {
-    width: 550px;
+    width: 475px;
     min-width: 401px;
-    max-width: 900px;
+    max-width: 605px;
     padding: 20px 15px;
     margin-top: 16px;
     margin-bottom: 16px;
@@ -93,7 +94,7 @@ article {
 }
 
 .card-info div {
-    border: 1.525px solid rgb(40, 40, 40);
+    border: 1.525px solid #282828;
     width: 100%;
     background-color: rgb(8, 8, 8);
     padding: 5px;
@@ -116,6 +117,35 @@ article {
     border-bottom-right-radius: 10px;
     justify-content: space-between;
     display: flex;
+}
+
+.chart {
+    width: 475px !important;
+    resize: none;
+}
+
+.chart div { 
+    background-color: #000;
+}
+
+.ob{ 
+    font-size: 0.88rem;
+    padding-top: 9px;
+}
+
+.chart div:nth-last-child(2) {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.chart div:nth-last-child(1) {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#popularity, #delta {
+    text-shadow: 0px 0px 8px #fff;
+    color: #000;
 }
 
 nav {
@@ -166,7 +196,10 @@ div p {
     }
     .card-info {
         resize: none;
-        margin-bottom: 35px;
+        margin-bottom: 0;
+    }
+    .chart {
+        margin-bottom: 32px;
     }
     article {
         height: auto;
@@ -180,6 +213,9 @@ div p {
         margin-bottom: 16px;
     }
     .card-info div {
+        width: auto;
+    }
+    .chart div {
         width: auto;
     }
     article img {

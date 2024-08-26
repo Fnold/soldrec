@@ -53,7 +53,7 @@
                     <rect width="56" height="8" x="0" y="48" fill="white" />
             </svg>
         </header>
-        <main style="background-image: url(../../assets/cards/latest/akcje/4.png) !important;"></main>
+        <main style="background-image: url(../../assets/cards/latest/akcje/4.webp) !important;"></main>
         
         <a id="card_random" onclick="random_card()">
             <img src="../../assets/random.png" class="random">
@@ -103,6 +103,26 @@
                         </a>
                     </nav>
                 </div>
+                <div>
+                    <div class="chart card-info">
+                        <div>
+                        <b><p>Frekwencja</p></b>
+                        <p class="ob">Grane w: <span id="popularity"></span> wszystkich talii</p>
+                        </div>
+                        <div>
+                            <canvas id="chart_popularity"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart card-info">
+                        <div>
+                            <b><p>Delta</p></b>
+                            <p class="ob">Obecna <abbr title="Delta = (% wygranych meczy z tą kartą) - 50%"><span style="border-bottom: 0.1rem dashed #FCFCFF;">Delta</span></abbr>: <span id="delta"></span></p>
+                            </div>
+                        <div>
+                            <canvas id="chart_delta"></canvas>
+                        </div>
+                    </div>
+                </div>
             </article>
         </section>
 
@@ -129,6 +149,7 @@
     </div>
     <script src="../../js/mobile-menu.js"></script>
     <script src="../../js/random-card.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../card-database/akcje/4.js"></script>
 </body>
 </html>

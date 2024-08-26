@@ -53,7 +53,7 @@
                     <rect width="56" height="8" x="0" y="48" fill="white" />
             </svg>
         </header>
-        <main style="background-image: url(../../assets/cards/latest/akcje/144.png) !important;"></main>
+        <main style="background-image: url(../../assets/cards/latest/akcje/144.webp) !important;"></main>
 
         <a id="card_random" onclick="random_card()">
             <img src="../../assets/random.png" class="random">
@@ -94,35 +94,55 @@
                     <abbr title="Następna karta">
                     <img src="../../assets/next.png" id="next_card">
                     </abbr>
-                    </a>
+                        </a>
                     </nav>
                 </div>
-            </article>
-        </section>
-
-        <footer>
-            <div>
-                <h3>SOLDREC</h3>
-                <ul>
-                    <li><p><a href="../../karty">Karty</a></p></li>
-                    <li><p><a href="../../zasady">Zasady</a></p></li>
-                    <li><p><a href="../../aktualnosci">Aktualności</a></p></li>
-                </ul>
-            </div>
-            <div>
-                <h3>INFORMACJE</h3>
-                <ul>
-                    <li><p><a href="../../projekt">O Projekcie</a></p></li>
-                    <li><p><a href="../../kontakt">Kontakt</a></p></li>
-                </ul>
-            </div>
-            <div>
-                <p>™ & © 2023-2024 Autorzy projektu SOLDREC. Wszelkie prawa zastrzeżone. Wszystkie treści audio, wizualne i tekstowe na tej stronie (w tym wszystkie nazwy, znaki, obrazy, historie, znaki towarowe i logo) są chronione znakami towarowymi, prawami autorskimi i innymi prawami własności intelektualnej należącymi ekskluzywnie do ich oryginalnych autorów lub ich spółek zależnych, licencjodawców, licencjobiorców, dostawców i kont.</p>
-            </div>
-        </footer>
-    </div>
+                <div>
+                    <div class="chart card-info">
+                        <div>
+                        <b><p>Frekwencja</p></b>
+                        <p class="ob">Grane w: <span id="popularity"></span> wszystkich talii</p>
+                        </div>
+                        <div>
+                            <canvas id="chart_popularity"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart card-info">
+                        <div>
+                            <b><p>Delta</p></b>
+                            <p class="ob">Obecna <abbr title="Delta = (% wygranych meczy z tą kartą) - 50%"><span style="border-bottom: 0.1rem dashed #FCFCFF;">Delta</span></abbr>: <span id="delta"></span></p>
+                            </div>
+                        <div>
+                            <canvas id="chart_delta"></canvas>
+                        </div>
+                    </div>
+                </div>
+        </article>
+    </section>
+    <footer>
+        <div>
+            <h3>SOLDREC</h3>
+            <ul>
+                <li><p><a href="../../karty">Karty</a></p></li>
+                <li><p><a href="../../zasady">Zasady</a></p></li>
+                <li><p><a href="../../aktualnosci">Aktualności</a></p></li>
+            </ul>
+        </div>
+        <div>
+            <h3>INFORMACJE</h3>
+            <ul>
+                <li><p><a href="../../projekt">O Projekcie</a></p></li>
+                <li><p><a href="../../kontakt">Kontakt</a></p></li>
+            </ul>
+        </div>
+        <div>
+            <p>™ & © 2023-2024 Autorzy projektu SOLDREC. Wszelkie prawa zastrzeżone. Wszystkie treści audio, wizualne i tekstowe na tej stronie (w tym wszystkie nazwy, znaki, obrazy, historie, znaki towarowe i logo) są chronione znakami towarowymi, prawami autorskimi i innymi prawami własności intelektualnej należącymi ekskluzywnie do ich oryginalnych autorów lub ich spółek zależnych, licencjodawców, licencjobiorców, dostawców i kont.</p>
+        </div>
+    </footer>
+</div>
     <script src="../../js/mobile-menu.js"></script>
     <script src="../../js/random-card.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../card-database/akcje/144.js"></script>
 </body>
 </html>

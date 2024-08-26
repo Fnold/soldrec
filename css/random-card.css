@@ -2,7 +2,7 @@
     width: 70px;
     height: 70px;
     position: absolute;
-    left: 5.3vw;
+    left: calc(100vw - 95.75%) !important;
     bottom: 11vh;
     bottom: 100px;
     padding: 4px;

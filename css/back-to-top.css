@@ -2,7 +2,7 @@
     width: 70px;
     height: 70px;
     position: fixed;
-    right: 5.3vw;
+    right: calc(100vw - 95.5%) !important;
     bottom: 11vh;
     bottom: 100px;
     padding: 4px;

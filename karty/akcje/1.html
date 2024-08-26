@@ -12,8 +12,13 @@
     <link rel="stylesheet" href="../../css/card-info.css">
     <link rel="stylesheet" href="../../css/random-card.css">
     <link rel="icon" href="../../assets/favicon.ico">
-    <meta property="og:image" content="fnold.github.io/soldrec/assets/cards/latest/akcje/1.png">
-    <meta property="og:title" content="" id="meta_title">
+    <style>
+        @media screen and (max-width:1806px) {
+        .random {
+        left: calc(100vw - 98%) !important;
+        }
+        }
+    </style>
 </head>
 
 <body>
@@ -55,7 +60,7 @@
                 <rect width="56" height="8" x="0" y="48" fill="white" />
             </svg>
         </header>
-        <main style="background-image: url(../../assets/cards/latest/akcje/1.png) !important;"></main>
+        <main style="background-image: url(../../assets/cards/latest/akcje/1.webp) !important;"></main>
         
         <a id="card_random" onclick="random_card()">
             <img src="../../assets/random.png" class="random">
@@ -102,9 +107,28 @@
                         </a>
                     </nav>
                 </div>
+                <div>
+                    <div class="chart card-info">
+                        <div>
+                        <b><p>Frekwencja</p></b>
+                        <p class="ob">Grane w: <span id="popularity"></span> wszystkich talii</p>
+                        </div>
+                        <div>
+                            <canvas id="chart_popularity"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart card-info">
+                        <div>
+                            <b><p>Delta</p></b>
+                            <p class="ob">Obecna <abbr title="Delta = (% wygranych meczy z tą kartą) - 50%"><span style="border-bottom: 0.1rem dashed #FCFCFF;">Delta</span></abbr>: <span id="delta"></span></p>
+                            </div>
+                        <div>
+                            <canvas id="chart_delta"></canvas>
+                        </div>
+                    </div>
+                </div>
             </article>
         </section>
-
         <footer>
             <div>
                 <h3>SOLDREC</h3>
@@ -128,6 +152,7 @@
     </div>
     <script src="../../js/mobile-menu.js"></script>
     <script src="../../js/random-card.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../card-database/akcje/1.js"></script>
 </body>
 </html>
