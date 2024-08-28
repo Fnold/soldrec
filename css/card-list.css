@@ -142,15 +142,3 @@ input {
         width: 90%;
     }
 }
-
-@media screen and (max-width:715px) {
-    #syntax {
-        width: 85%;
-    }
-}
-
-@media screen and (max-width:430px) {
-    #syntax {
-        width: 90%;
-    }
-}

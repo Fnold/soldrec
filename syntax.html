@@ -17,34 +17,42 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 110%;
     }
-
     .codeA {
     color: crimson;
     }
-
     .codeB {
     color: turquoise;
     }
-
     .codeC {
     color: gold;
     }
-
     .codeD{
     color: rgb(0, 255, 0);
     }
-
     .codeE{
     color: rgb(255, 0, 255);
     }
-
     #syntax {
     width: 45%;
     margin: 0 auto;
     }
-
     details {
-        padding: 20px;
+    padding: 20px;
+    }
+    @media screen and (max-width:925px) {
+    #syntax {
+        width: 90%;
+    }
+    }
+    @media screen and (max-width:715px) {
+    #syntax {
+    width: 85%;
+    }
+    }
+    @media screen and (max-width:430px) {
+    #syntax {
+    width: 90%;
+    }
     }
     </style>
 </head>
@@ -180,6 +188,5 @@
     </footer>
     <script src="js/mobile-menu.js"></script>
     <script src="js/back-to-top.js"></script>
-    <script src="js/random-card.js"></script>
 </body>
 </html>
