@@ -128,7 +128,6 @@ article {
 }
 
 .chart {
-    width: 475px !important;
     resize: none;
 }
 
@@ -224,7 +223,7 @@ div p {
         width: auto;
     }
     .chart {
-        width: 100% !important;
+        width: 100%;
     }
     #charts {
         padding-bottom: 16px;
