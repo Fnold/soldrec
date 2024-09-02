@@ -107,7 +107,7 @@
             <p>Oprócz zwykłych nazw kart oraz statystyk jednostek w formacie X/X/X/X, wyszukiwanie kart można jeszcze szerzej filtrować na wiele sposobów.</p>
             <p><h1>Podstawowe ekspresje:</h1></p>
             <p><h2>Wyszukiwanie kart po typie</h2></p>
-            <p>Karty można wyszukiwać po ich typie wpisując <code class="codeA">t:</code> lub <code class="codeA">typ:</code> poprzedzone odpowiednim typem:
+            <p>Karty można wyszukiwać po ich typie, wpisując ich odpowiedni typ:
             <br><code class="codeA">akcja</code> - Wyszuka tylko Akcje.
             <br><code class="codeA">akcjan</code> - Wyszuka tylko Akcje z tempem NATYCH.
             <br><code class="codeA">akcjar</code> - Wyszuka tylko Akcje z tempem ROZKAZ.
@@ -117,19 +117,19 @@
             <br><code class="codeA">operator</code> - Wyszuka tylko Jednostki, które mogą być Operatorami.
             <br><code class="codeA">operatorg</code> - Wyszuka tylko Operatorów z gwiazdką.
             <br><code class="codeA">operatorbg</code> - Wyszuka tylko Operatorów bez gwiazdki.
-            <p>Przykład: <code class="codeA">t:jednostka</code> wyszuka tylko i wyłącznie Jednostki.</p>
+            <p>Przykład: <code class="codeA">jednostka</code> wyszuka tylko i wyłącznie Jednostki.</p>
             </p>
             <p><h2>Wyszukiwanie jednostek po kolorze</h2></p>
-            <p>Jednostki można wyszukiwać po ich kombinacji kolorów wpisując <code class="codeB">k:</code> lub <code class="codeB">kolor:</code> poprzedzone odpowiednią kombinacją kolorów:
+            <p>Jednostki można wyszukiwać po ich kombinacji kolorów, wpisując odpowiednią kombinację:
                 <br><code class="codeB">c---</code> - Wyszuka tylko Jednostki czerwone.
                 <br><code class="codeB">cnyz</code> - Wyszuka tylko Jednostki o wszystkich kolorach.
                 <br><code class="codeB">c--z</code> - Wyszuka tylko Jednostki czerwono-zielone.
                 <br><code class="codeB">--y-</code> - Wyszuka tylko Jednostki żółte.
                 <br><code class="codeB">c-yz</code> - Wyszuka tylko Jednostki czerwono-żółto-zielone.
-                <p>Przykład: <code class="codeB">k:c-y-</code> wyszuka tylko i wyłącznie Jednostki o kombinacji kolorów czerwono-żółtej.</p>
+                <p>Przykład: <code class="codeB">c-y-</code> wyszuka tylko i wyłącznie Jednostki o kombinacji kolorów czerwono-żółtej.</p>
             </p>
             <p><h2>Wyszukiwanie kart po domenie</h2></p>
-            <p>Każda karta należy do swojej domeny, podana jest ona na dole jednostek oraz na górze akcji. Za jej pomocą można odróżniać karty i grupować je. Aby wyszukać kartę za pomocą jej domeny należy wyszukać <code class="codeC">d:</code> lub <code class="codeC">domena:</code> poprzedzone odpowiednią domeną.
+            <p>Każda karta należy do swojej domeny, podana jest ona na dole jednostek oraz na górze akcji. Za jej pomocą można odróżniać karty i grupować je. Aby wyszukać kartę za pomocą jej domeny należy wyszukać nazwę danej domeny.
             <details>
                 <summary>Lista Domen</summary>
                 BNL - Beka Na Lekcji<br>
@@ -145,23 +145,29 @@
                 SR - SOLDREC<br>
                 SV - Soldwersum<br>
                 WPM - W Poszukiwaniu Maryśki<br>
-                WW - Wyspa Wyzwań<br>
+                WW - Wyspa Wyzwań
             </details>
-                <p>Przykład: <code class="codeC">d:sea</code> wyszuka tylko i wyłącznie karty z domeny SEA.</p>
+                <p>Przykład: <code class="codeC">sea</code> wyszuka tylko i wyłącznie karty z domeny SEA.</p>
             </p>
             <p><h2>Wyszukiwanie kart po aktualizacji</h2></p>
-            <p>Karty można wyszukiwać po ich aktualizacjach, w których zostały dodane. Aby to zrobić należy wyszukać <code class="codeD">u:</code> lub <code class="codeD">update:</code> poprzedzone odpowiednią aktualizacją:
-                <br><code class="codeD">alpha</code> - Wyszuka tylko karty sprzed jakiejkowiek aktualizacji, z "alphy" gry (2023).
+            <p>Karty można wyszukiwać po ich aktualizacjach, w których zostały dodane. Aby to zrobić należy wyszukać daną aktualizację:
+                <br><code class="codeD">alpha</code> - Wyszuka tylko karty sprzed jakiejkowiek aktualizacji, z "Alphy" gry (2023).
                 <br><code class="codeD">soldsea</code> - Wyszuka tylko karty z aktualizacji The Sold Sea (2024).
                 <br><code class="codeD">naprawa</code> - Wyszuka tylko karty z aktualizacji Naprawa (2024).
-                <p>Przykład: <code class="codeD">u:soldsea</code> wyszuka tylko i wyłącznie karty dodane w aktualizacji The Sold Sea (2024).</p>
+                <p>Przykład: <code class="codeD">soldsea</code> wyszuka tylko i wyłącznie karty dodane w aktualizacji The Sold Sea (2024).</p>
             </p>
             <p><h2>Wyszukiwanie kart po artystach</h2></p>
-            <p>Karty można wyszukiwać po artystach, którzy wykonali dla karty rysunek. Aby to zrobić należy wyszukać <code class="codeE">a:</code> lub <code class="codeE">artysta:</code> poprzedzone odpowiednim artystą:
+            <p>Karty można wyszukiwać po artystach, którzy wykonali dla karty rysunek. Aby to zrobić należy wyszukać danego artystę:
                 <br><code class="codeE">fnold</code> - Wyszuka tylko karty narysowane przez Fnold.
                 <br><code class="codeE">soldik</code> - Wyszuka tylko karty narysowane przez Soldik.
-                <br><code class="codeE">magnus</code> - Wyszuka tylko karty narysowane przez Magnus.
-                <p>Przykład: <code class="codeE">a:fnold</code> wyszuka tylko karty zilustrowane przez artystę Fnold.</p>
+                <details>
+                    <summary>Lista Artystów</summary>
+                    Fnold<br>
+                    Magnus<br>
+                    Memien<br>
+                    Soldik
+                </details>
+                <p>Przykład: <code class="codeE">fnold</code> wyszuka tylko karty zilustrowane przez artystę Fnold.</p>
             </p>
             </div>
         </article>
