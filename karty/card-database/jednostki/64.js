@@ -1,20 +1,28 @@
 function latest() {
-    const card_title = "Nembik (usunięty)";
+    const card_title = "Czerwony Stwórca";
     const site_title = card_title;
-    const card_cost = "6M 6P";
-    const card_cost_info = "6 Many i 6 Popularności";
-    const card_type = "Jednostka - Operator";
+    const card_cost = "15M 10P";
+    const card_cost_info = "15 Many i 10 Popularności";
+    const card_type = "Jednostka - Operator z Gwiazdką";
     const card_subtype = `
         <p>
-        TBA
+        Szef, Demon, Niszczyciel, Mag
         </p>`;
+    const card_description = `
+        <p>Tracisz X zdrowia, gdzie X jest liczbą różnych typów jednostek po twojej stronie. Wybierz jednostkę inną niż ta. Ta jednostka umiera.</p>
+        <br>
+        <p>Za każdym razem, gdy niekukłowa i/lub nieoperatorowa jednostka umiera, zostaje ona wskrzeszona po stronie losowego gracza.</p>`;
     const card_stats = `
         <p>
-        0/4/0/4
+        9/0/9/3
         </p>`;
+    const card_flavor = `
+        <i>
+        "Wiesz kim JA jestem?"
+        </i>`;
     const card_author = `
         <i>
-        Ilustracja: Soldik 2020
+        Ilustracja: Soldik 2024
         </i>`;
     document.getElementById("card_title").innerHTML = card_title;
     document.getElementById("site_title").innerHTML = site_title;
@@ -22,9 +30,11 @@ function latest() {
     document.getElementById("card_cost_info").title = card_cost_info;
     document.getElementById("card_type").innerHTML = card_type;
     document.getElementById("card_subtype").innerHTML = card_subtype;
+    document.getElementById("card_description").innerHTML = card_description;
     document.getElementById("card_stats").innerHTML = card_stats;
+    document.getElementById("card_flavor").innerHTML = card_flavor;
     document.getElementById("card_author").innerHTML = card_author;
-    document.getElementById("card_image").src = "../../assets/cards/latest/jednostki/24.webp";
+    document.getElementById("card_image").src = "../../assets/cards/latest/jednostki/64.webp";
     document.getElementById("card_image").alt = card_title;
     document.getElementById("latest_selector").innerHTML = `&gt;<u>Najnowsza</u>`;
 }

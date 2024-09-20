@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=~~, initial-scale=1.0">
+    <title>SOLDREC - Aktualizacja v1.2.1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/card-list.css">
+    <link rel="stylesheet" href="../css/back-to-top.css">
+    <link rel="icon" href="../assets/favicon.ico">
+    <meta property="og:url" content="https://fnold.github.io/soldrec">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SOLDREC 1.2.1">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://fnold.github.io/soldrec/assets/updates/1.2.1.png">
+    <style>
+        .card-info {
+        width: 100%;
+        padding: 20px 15px;
+        margin-top: 32px;
+        margin-bottom: 16px;
+        border-radius: 16px;
+        border: 3.5px solid rgb(31, 31, 31);
+        background: linear-gradient(-25deg, rgb(24, 24, 24), rgb(10, 10, 10));
+        animation-name: background_animation;
+        animation-duration: 0.55s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+        }
+        @keyframes background_animation {
+        0% {
+        background: linear-gradient(-360deg, rgb(44, 44, 44), rgb(10, 10, 10));
+        }
+        10% {
+        background: linear-gradient(-349deg, rgb(42, 42, 42), rgb(10, 10, 10));
+        }
+        20% {
+        background: linear-gradient(-313deg, rgb(40, 40, 40), rgb(10, 10, 10));
+        }
+        30% {
+        background: linear-gradient(-277deg, rgb(38, 38, 38), rgb(10, 10, 10));
+        }
+        40% {
+        background: linear-gradient(-241deg, rgb(36, 36, 36), rgb(10, 10, 10));
+        }
+        50% {
+        background: linear-gradient(-205deg, rgb(34, 34, 34), rgb(10, 10, 10));
+        }
+        60% {
+        background: linear-gradient(-169deg, rgb(32, 32, 32), rgb(10, 10, 10));
+        }
+        70% {
+        background: linear-gradient(-133deg, rgb(30, 30, 30), rgb(10, 10, 10));
+        }
+        80% {
+        background: linear-gradient(-97deg, rgb(28, 28, 28), rgb(10, 10, 10));
+        }
+        90% {
+        background: linear-gradient(-61deg, rgb(26, 26, 26), rgb(10, 10, 10));
+        }
+        100% {
+        background: linear-gradient(-25deg, rgb(24, 24, 24), rgb(10, 10, 10));
+        }
+        }
+        .card-info div {
+        border: 1.525px solid #282828;
+        width: 100%;
+        background-color: rgb(8, 8, 8);
+        padding: 5px;
+        }
+        .card-info div:first-child {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        }
+        .card-info div:nth-last-child(1) {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        }
+        .patch {
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        }
+        .patch img {
+        width: 100%;
+        }
+        @media screen and (max-width:550px) {
+        h1 {
+        position: inherit !important;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-mobile">
+        <img src="../assets/close.png" class="close-img" onclick="mobile_menu_close()" alt="Zamknij">
+        <div>
+            <h2>SOLDREC</h2>
+            <ul>
+                <li><a href="../karty">Karty</a></li>
+                <li><a href="../zasady">Zasady</a></li>
+                <li><a href="../aktualnosci">Aktualności</a></li>
+            </ul>
+        </div>
+        <div>
+            <h2>INFORMACJE</h2>
+            <ul>
+                <li><a href="../projekt">O Projekcie</a></li>
+                <li><a href="../kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+        <div onclick="random_card()">
+            <h2>LOSOWA KARTA</h2>
+            <ul>
+                <li><img src="../assets/random.png" id="random_mobile"></li>
+            </ul>
+        </div>
+    </div>
+    <main id="main">
+        <header class="header">
+            <a href="../karty"><img src="../assets/logo.png" alt="SOLDREC" id="logoimg"></a>
+            <ul>
+                <li><h2><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3227539990" id="graj" target="_blank"><i>GRAJ TERAZ</i></a></h2></li>
+                <li><a href="../karty">Karty</a></li>
+                <li><a href="../aktualnosci">Aktualności</a></li>
+            </ul>
+            <svg width="64" height="64" onclick="mobile_menu_open()" class="menu-button">
+                <rect width="56" height="8" x="0" y="8" fill="white" />
+                <rect width="56" height="8" x="0" y="28" fill="white" />
+                <rect width="56" height="8" x="0" y="48" fill="white" />
+            </svg>
+        </header>
+    </main>
+    <a onclick="ToTop()">
+        <img src="../assets/arrow.png" class="back-to-top" id="back_to_top">
+    </a>
+    <section>
+        <article>
+            <h1 style="position: sticky; top: -44px; z-index: 99;">Aktualizacja v1.2.1</h1>
+            <h3><i>20 września 2024</i></h3>
+            <h2 style="margin-top: 128px;"><i>- INFORMACJE -</i></h2>
+            <div class="card-info">
+                <div>
+                <h2>STRESZCZENIE</h2>
+                </div>
+                <div>
+                <img src="../assets/updates/1.2.1.png" style="max-width: 100%;">
+                </div>
+            </div>
+            <h2 style="margin-top: 128px;"><i>- ZMIANY -</i></h2>
+            <div class="card-info">
+                <div>
+                <h2>NERFY</h2>
+                </div>
+                <div>
+                <h4>MOKRA ROBOTA</h4>
+                <div class="patch">
+                <img src="../assets/cards/1.2.0/akcje/138.webp">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/cards/latest/akcje/138.webp">
+                </div>
+                <div>
+                Porównując tę kartę z innymi metodami pozbywania się jednostek, przykładowo Trupia Loteria za równy koszt many i dodatkowe 12 popularności zada jednej jednostce 4 obrażenia lub NAJWYŻEJ, w IDEALNYCH okolicznościach, 15 obrażeń gdy Mokra Robota za mniejszy koszt po prostu likwiduje jednostkę.  Największy Sztorm za 2 więcej many i dodatk. 12 popularności likwiduje nie dość losową jednostkę to na dodatek nie-morską.
+                </div>
+                <div class="patch">
+                <h4>
+                KOSZT ZAGRYWANIA MANY 8 >> 9
+                </h4>
+                </div>
+                <h4>RAPTOWŃSKI SPAMER</h4>
+                <div class="patch">
+                <img src="../assets/cards/1.1.0/jednostki/97.webp">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/cards/latest/jednostki/97.webp">
+                </div>
+                <div>
+                Za jedyne 6 many można zaszkodzić każdemu wrogowi poprzez odrzucenie karty. W tym momencie w grze jest mało kart które dobierają karty. Na dodatek przy wręcz pewnej śmierci od atakowania, w zapewne tej samej turze co zagrano, ulepszana jest jednostka. Podsumowując: za 6 many każdy twój wróg odrzuca 1 kartę, atakujesz gdziesz za 9 i ulepszasz jednostkę. Karta jest zbyt potężna.                </div>
+                <div class="patch">
+                <h4>
+                KOSZT ZAG. POPULARNOŚCI 0 >> 10<br>
+                ATAK 9 >> 8
+                </h4>
+                </div>
+                <h4>SKKB</h4>
+                <div class="patch">
+                <img src="../assets/cards/1.2.0/jednostki/46.webp">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/cards/latest/jednostki/46.webp">
+                </div>
+                <div>
+                Pomimo wszystkich starań, SKKB nadal jest za mocny. W przeciągu 2 tur od jego zagrania, jeżeli nie zostały podjęte przeciwko niemu jakiekolwiek działania, jego statystyki osiągają sumy większe niż 50.                </div>
+                <div class="patch">
+                <h4>
+                KOSZT ZAGRYWANIA MANY 11 >> 14
+                </h4>
+                </div>
+                <h4>STRZAŁ</h4>
+                <div class="patch">
+                <img src="../assets/cards/1.1.0/akcje/49.webp">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/cards/latest/akcje/49.webp">
+                </div>
+                <div>
+                Grając w mecze 4-osobowe ta karta jest po prostu zbyt potężna. Pozwala na strzelanie w wrogie jednostki przy czym, jeśli zginą, zyskiwania na nowo ładunków strzelania. Przy dobrych wiatrach można było tak strzelać w nieskończoność kończąc przy tym gry.                </div>
+                <div class="patch">
+                <h4>
+                MAKS. ILOŚĆ NOWYCH ŁADUNKÓW NA TURĘ ∞ >> 1
+                </h4>
+                </div>
+                <h4>SWOLD</h4>
+                <div class="patch">
+                <img src="../assets/cards/1.1.0/akcje/117.webp">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/cards/latest/akcje/117.webp">
+                </div>
+                <div>
+                Porównując kartę Swold z kartą Worderblade, można zauważyć, że obie karty wzmacniają siłę jednostki o maksymalnie 8, w zależności od jej specyfikacji. Jednak Swold dodatkowo zwiększa pancerz tej jednostki o maksymalnie 8. To stanowi znaczącą przewagę nad Worderblade, lecz kosztuje mniej.                </div>
+                <div class="patch">
+                <h4>
+                NATYCH. > ROZKAZ<br>
+                KOSZT ZAGRYWANIA MANY 7 >> 8
+                </h4>
+                </div>
+                </div>
+            </div>
+            <div class="card-info">
+                <div>
+                <h2>BUFFY</h2>
+                </div>
+                <div>
+                <h4>POSUWACZ</h4>
+                <div class="patch">
+                <img src="../assets/cards/alpha/jednostki/62.webp">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/cards/latest/jednostki/62.webp">
+                </div>
+                <div>
+                Ogromny koszt wiążący się z potencjalną niechcianą utratą jednostki poprzez karty typu Działo Orbitalne, Mokra Robota, Tego Nigdy Nie Było nawet kiedy nie celują one w Posuwacza i nawet kiedy sam gracz Posuwacza ich użyje.</div>
+                <div class="patch">
+                <h4>
+                KAŻDA AKCJA >> TYLKO WYBRANE AKCJE<br>
+                KOSZT ZAGRYWANIA MANY 17 >> 18
+                </h4>
+                </div>
+                </div>
+                </div>
+            <div class="card-info">
+                <div>
+                <h2>SYSTEMY</h2>
+                </div>
+                <div>
+                <h4>WYCOFANIE NOWYCH ZASAD STARTU</h4>
+                <div>
+                Rozpoczęcie gry z walutami po 10 okazało się niestety słabym pomysłem, który szybko stracił na atrakcyjności. Pomysł miał na celu wprowadzenie równowagi w starcie gry, ale w praktyce sprawił, że początki stawały się przewidywalne oraz wprowadziło to dodatkowe szczeble techniki balansu gry ze strony technicznej. Wystarczyło że karta miała koszt tylko 11 i już nie mogła być zagrywana na start - blokując go.  W efekcie, starty gry stały się mniej zabawne oraz spowalniały one grę. Ta szybka dawka adrenaliny na początku meczu jest nie do zastąpienia. Teraz, tak jak kiedyś, startując grę pierwsza jednostka jest po prostu darmowa.                </div>
+                </div>
+                </div>
+            </div>
+            <h2 style="margin-top: 128px;"><i>- NOWOŚCI -</i></h2>
+            <div class="card-info">
+                <div>
+                <h2>SYSTEMY</h2>
+                </div>
+                <div>
+                <h4>KOSZT ZAGRYWANIA - ZDROWIE</h4>
+                <div>
+                Nowy koszt zagrywania kart, zdrowie, pożera zdrowie gracza zagrywającego równe kosztowi. Zdrowie też jest zasobem.                </div>
+                <h4>POCZĄTEK METRYK</h4>
+                <div>
+                Od tej aktualizacji zbierane będą "metryki" - dane na temat tego, które karty wygrywają oraz jak często znajdują się w taliach. Dane te posłużą tylko i wyłącznie do wykresów na stronach poszczególnych kart i do okazjonalnych infografik balansowych. Do czasu zdobycia odpowiedniej ilości danych, wszystkie karty będą wyświetlać Frekwencję 50% i Deltę 0.                </div>
+                <h4>SZCZEGÓŁOWE AKTUALIZACJE</h4>
+                <div>
+                Od teraz co każdą aktualizację pojawiać się będą na jej tematy szczegóły takie jak ta strona - Witaj!                </div>
+                <h4>ZATRUWANIE GRACZY</h4>
+                <div>
+                Niektóre karty mogą teraz zatruwać graczy, działa to w identyczny sposób co zatruwanie jednostek jednak zabiera zdrowie gracza zamiast jednostki.                </div>
+                </div>
+            </div>
+            </div>
+            <div class="card-info">
+                <div>
+                <h2>KARTY</h2>
+                </div>
+                <div class="cards">
+                    <a class="card" href="../karty/akcje/145">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/145.webp" alt="Tego Nigdy Nie Było">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/146">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/146.webp" alt="Marsz Potępionych">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/147">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/147.webp" alt="Przybliżenie">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/148">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/148.webp" alt="Chytruski Ziggurat">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/149">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/149.webp" alt="Nadanie">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/150">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/150.webp" alt="Gdzie On">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/64">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/64.webp" alt="Czerwony Stwórca">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/107">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/107.webp" alt="Korm">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/108">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/108.webp" alt="Jankowski">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/109">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/109.webp" alt="Ordynator">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/110">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/110.webp" alt="Chmielnik">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/111">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/111.webp" alt="Pigh">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/112">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/112.webp" alt="Anonim 5">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+            <div>
+                <h3>SOLDREC</h3>
+                <ul>
+                    <li><p><a href="../karty">Karty</a></p></li>
+                    <li><p><a href="../zasady">Zasady</a></p></li>
+                    <li><p><a href="../aktualnosci">Aktualności</a></p></li>
+                </ul>
+            </div>
+            <div>
+                <h3>INFORMACJE</h3>
+                <ul>
+                    <li><p><a href="../projekt">O Projekcie</a></p></li>
+                    <li><p><a href="../kontakt">Kontakt</a></p></li>
+                </ul>
+            </div>
+            <div>
+                <p>™ & © 2023-2024 Autorzy projektu SOLDREC. Wszelkie prawa zastrzeżone. Wszystkie treści audio, wizualne i tekstowe na tej stronie (w tym wszystkie nazwy, znaki, obrazy, historie, znaki towarowe i logo) są chronione znakami towarowymi, prawami autorskimi i innymi prawami własności intelektualnej należącymi ekskluzywnie do ich oryginalnych autorów lub ich spółek zależnych, licencjodawców, licencjobiorców, dostawców i kont.</p>
+            </div>
+    </footer>
+    <script src="../js/mobile-menu.js"></script>
+    <script src="../js/back-to-top.js"></script>
+    <script src="../js/random-card.js"></script>
+</body>
+</html>
