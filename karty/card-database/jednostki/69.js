@@ -22,7 +22,7 @@ function latest() {
         </i>`;
     const card_author = `
         <i>
-        Ilustracja: Soldik 2023
+        Ilustracja: Soldin 2023
         </i>`;
     document.getElementById("card_title").innerHTML = card_title;
     document.getElementById("site_title").innerHTML = site_title;

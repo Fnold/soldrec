@@ -14,7 +14,7 @@ function latest() {
         </i>`;
     const card_author = `
         <i>
-        Ilustracja: Soldik 2023
+        Ilustracja: Soldin 2023
         </i>`;
     document.getElementById("card_title").innerHTML = card_title;
     document.getElementById("site_title").innerHTML = site_title;
@@ -45,7 +45,7 @@ function alpha() {
         </i>`;
     const card_author = `
         <i>
-        Ilustracja: Soldik 2022
+        Ilustracja: Soldin 2022
         </i>`;
     document.getElementById("card_title").innerHTML = card_title;
     document.getElementById("site_title").innerHTML = site_title;

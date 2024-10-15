@@ -18,7 +18,7 @@ function latest() {
         </p>`;
     const card_author = `
         <i>
-        Ilustracja: Soldik 2024
+        Ilustracja: Soldin 2024
         </i>`;
     document.getElementById("card_title").innerHTML = card_title;
     document.getElementById("site_title").innerHTML = site_title;
@@ -54,7 +54,7 @@ function v1_1_0() {
         </p>`;
     const card_author = `
         <i>
-        Ilustracja: Soldik 2024
+        Ilustracja: Soldin 2024
         </i>`;
     document.getElementById("card_title").innerHTML = card_title;
     document.getElementById("site_title").innerHTML = site_title;
