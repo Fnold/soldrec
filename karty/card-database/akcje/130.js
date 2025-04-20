@@ -3,7 +3,7 @@ function latest() {
     const site_title = card_title;
     const card_cost = "4M";
     const card_cost_info = "4 Many";
-    const card_type = "Akcja - SCENARIUSZ";
+    const card_type = "Akcja - PLAN";
     const card_description = `
         <p>
         Adwansuj pod koniec każdej sojuszniczej tury.
@@ -36,10 +36,10 @@ function latest() {
 }
 document.addEventListener("DOMContentLoaded", latest);
 
-    const ctxP = document.getElementById('chart_popularity');
-    const ctxD = document.getElementById('chart_delta');
     const current_popularity = 50;
     const current_delta = 0;
+    const ctxP = document.getElementById('chart_popularity');
+    const ctxD = document.getElementById('chart_delta');
     document.getElementById("popularity").innerHTML = "&nbsp;"+current_popularity+"%&nbsp;";
     document.getElementById("delta").innerHTML = "&nbsp;"+current_delta+"&nbsp;";
     
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", latest);
     new Chart(ctxP, {
         type: 'line',
         data: {
-        labels: ['1.2.1'],
+        labels: ['1.3.0'],
         datasets: [{
             label: 'Frekwencja',
             data: [current_popularity],
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", latest);
     new Chart(ctxD, {
         type: 'line',
         data: {
-        labels: ['1.2.1'],
+        labels: ['1.3.0'],
         datasets: [{
             label: 'Delta',
             data: [current_delta],

@@ -214,6 +214,9 @@ div p {
 }
 
 @media screen and (max-width:500px) {
+    #card_image {
+        width: 95%;
+    }
     .card-info {
         resize: none;
         margin-top: 0px;

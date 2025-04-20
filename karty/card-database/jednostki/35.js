@@ -1,6 +1,43 @@
 function latest() {
     const card_title = "Mag 73";
     const site_title = card_title;
+    const card_cost = "14M 5P";
+    const card_cost_info = "14 Many i 5 Popularności";
+    const card_type = "Jednostka - Operator bez Gwiazdki";
+    const card_subtype = `
+        <p>
+        Człowiek, Mag
+        </p>`;
+    const card_description = `
+        <p>Dobierz 1 kartę.</p>
+        <br>
+        <p>Zagrywane przez ciebie karty kosztują 1 mniej many. Za każdym razem, gdy ta jednostka zostaje wybrana przez wroga, ten wróg traci 5 zdrowia. Za każdym razem, gdy sojusznicza jednostka zablokuje atak i przeżyje, dobierz 1 kartę.</p>`;
+    const card_stats = `
+        <p>
+        5/7/5/3
+        </p>`;
+    const card_author = `
+        <i>
+        Ilustracja: Soldin 2020
+        </i>`;
+    document.getElementById("card_title").innerHTML = card_title;
+    document.getElementById("site_title").innerHTML = site_title;
+    document.getElementById("card_cost").innerHTML = card_cost;
+    document.getElementById("card_cost_info").title = card_cost_info;
+    document.getElementById("card_type").innerHTML = card_type;
+    document.getElementById("card_subtype").innerHTML = card_subtype;
+    document.getElementById("card_description").innerHTML = card_description;
+    document.getElementById("card_stats").innerHTML = card_stats;
+    document.getElementById("card_author").innerHTML = card_author;
+    document.getElementById("card_image").src = "../../assets/cards/latest/jednostki/35.webp";
+    document.getElementById("card_image").alt = card_title;
+    document.getElementById("latest_selector").innerHTML = `&gt;<u>Najnowsza</u>`;
+    document.getElementById("v1_0_0_selector").innerHTML = `<u>v1.0.0</u>`;
+    document.getElementById("alpha_selector").innerHTML = `<u>Alpha</u>`;
+}
+function v1_0_0() {
+    const card_title = "Mag 73";
+    const site_title = card_title+" (v1.0.0)";
     const card_cost = "11M 8P";
     const card_cost_info = "11 Many i 8 Popularności";
     const card_type = "Jednostka - Operator bez Gwiazdki";
@@ -29,9 +66,10 @@ function latest() {
     document.getElementById("card_description").innerHTML = card_description;
     document.getElementById("card_stats").innerHTML = card_stats;
     document.getElementById("card_author").innerHTML = card_author;
-    document.getElementById("card_image").src = "../../assets/cards/latest/jednostki/35.webp";
+    document.getElementById("card_image").src = "../../assets/cards/1.0.0/jednostki/35.webp";
     document.getElementById("card_image").alt = card_title;
-    document.getElementById("latest_selector").innerHTML = `&gt;<u>Najnowsza</u>`;
+    document.getElementById("latest_selector").innerHTML = `<u>Najnowsza</u>`;
+    document.getElementById("v1_0_0_selector").innerHTML = `&gt;<u>v1.0.0</u>`;
     document.getElementById("alpha_selector").innerHTML = `<u>Alpha</u>`;
 }
 function alpha() {
@@ -68,14 +106,15 @@ function alpha() {
     document.getElementById("card_image").src = "../../assets/cards/alpha/jednostki/35.webp";
     document.getElementById("card_image").alt = card_title;
     document.getElementById("latest_selector").innerHTML = `<u>Najnowsza</u>`;
+    document.getElementById("v1_0_0_selector").innerHTML = `<u>v1.0.0</u>`;
     document.getElementById("alpha_selector").innerHTML = `&gt;<u>Alpha</u>`;
 }
 document.addEventListener("DOMContentLoaded", latest);
 
-    const ctxP = document.getElementById('chart_popularity');
-    const ctxD = document.getElementById('chart_delta');
     const current_popularity = 50;
     const current_delta = 0;
+    const ctxP = document.getElementById('chart_popularity');
+    const ctxD = document.getElementById('chart_delta');
     document.getElementById("popularity").innerHTML = "&nbsp;"+current_popularity+"%&nbsp;";
     document.getElementById("delta").innerHTML = "&nbsp;"+current_delta+"&nbsp;";
     
@@ -132,7 +171,7 @@ document.addEventListener("DOMContentLoaded", latest);
     new Chart(ctxP, {
         type: 'line',
         data: {
-        labels: ['1.2.1'],
+        labels: ['1.3.0'],
         datasets: [{
             label: 'Frekwencja',
             data: [current_popularity],
@@ -173,7 +212,7 @@ document.addEventListener("DOMContentLoaded", latest);
     new Chart(ctxD, {
         type: 'line',
         data: {
-        labels: ['1.2.1'],
+        labels: ['1.3.0'],
         datasets: [{
             label: 'Delta',
             data: [current_delta],
