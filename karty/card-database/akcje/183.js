@@ -42,8 +42,8 @@ function latest() {
 document.addEventListener("DOMContentLoaded", latest);
 
     const card_id = (document.currentScript?.getAttribute('src') || '').match(/\/(\d+)(?=\.js(?:$|\?|#))/)?.[1];
-    const current_popularity = eval(`v1_3_0AkcjaCard${card_id}Popularity`);
-    const current_delta = eval(`v1_3_0AkcjaCard${card_id}Delta`);
+    let current_popularity = eval(`v1_3_0AkcjaCard${card_id}Popularity`);
+    let current_delta = eval(`v1_3_0AkcjaCard${card_id}Delta`);
     const ctxP = document.getElementById('chart_popularity');
     const ctxD = document.getElementById('chart_delta');
     if (current_popularity == null) {
