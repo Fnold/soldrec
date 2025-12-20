@@ -6,7 +6,7 @@ function latest() {
     const card_type = "Akcja - NATYCH.";
     const card_description = `
         <p>
-        Przeszukaj swoją talię po kartę jednostki. Umieść tę kartę na twoim cmentarzu.
+        Przeszukaj swoją talię po kartę jednostki i pokaż ją. Umieść tę kartę na swoim cmentarzu i przetasuj swoją talię.
         </p>`;
     const card_author = `
         <i>
