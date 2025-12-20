@@ -15,14 +15,15 @@ if (document.querySelector('input').value) {
     document.getElementById('search_clear').style.display = "none";
 }
 if (document.querySelector('input').value != null) {
-const resultnumber = (document.querySelectorAll('.card[style*="display: block"]').length)/2;
-if (resultnumber == 2 || resultnumber == 3 || resultnumber == 4) {
-    document.getElementById("resultsnumber").innerHTML = resultnumber+" karty";
-} else if (resultnumber == 1) {
-    document.getElementById("resultsnumber").innerHTML = resultnumber+" karta";
-} else {
-    document.getElementById("resultsnumber").innerHTML = resultnumber+" kart";
-}
+    const ResultNumber = (document.querySelectorAll('.card[style*="display: block"]').length)/2;
+    const ResultNumberLastDigit = String(ResultNumber).slice(-1);
+    if (ResultNumberLastDigit == 2 || ResultNumberLastDigit == 3 || ResultNumberLastDigit == 4) {
+        document.getElementById("resultsnumber").innerHTML = ResultNumber+" karty";
+    } else if (ResultNumber == 1) {
+        document.getElementById("resultsnumber").innerHTML = ResultNumber+" karta";
+    } else {
+        document.getElementById("resultsnumber").innerHTML = ResultNumber+" kart";
+    }
 }
 }
 window.addEventListener("DOMContentLoaded", function () {

@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SK5SVWXJ58"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SK5SVWXJ58');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLDREC - Aktualizacja v1.4.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/card-list.css">
+    <link rel="stylesheet" href="../css/back-to-top.css">
+    <link rel="icon" href="../assets/favicon.ico">
+    <meta property="og:url" content="https://fnold.github.io/soldrec">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SOLDREC 1.4.0">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://fnold.github.io/soldrec/assets/updates/1.4.0.png">
+    <style>
+        .card-info {
+        width: 100%;
+        padding: 20px 15px;
+        margin-top: 32px;
+        margin-bottom: 16px;
+        border-radius: 16px;
+        border: 3.5px solid rgb(31, 31, 31);
+        background: linear-gradient(-25deg, rgb(24, 24, 24), rgb(10, 10, 10));
+        animation-name: background_animation;
+        animation-duration: 0.55s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+        }
+        @keyframes background_animation {
+        0% {
+        background: linear-gradient(-360deg, rgb(44, 44, 44), rgb(10, 10, 10));
+        }
+        10% {
+        background: linear-gradient(-349deg, rgb(42, 42, 42), rgb(10, 10, 10));
+        }
+        20% {
+        background: linear-gradient(-313deg, rgb(40, 40, 40), rgb(10, 10, 10));
+        }
+        30% {
+        background: linear-gradient(-277deg, rgb(38, 38, 38), rgb(10, 10, 10));
+        }
+        40% {
+        background: linear-gradient(-241deg, rgb(36, 36, 36), rgb(10, 10, 10));
+        }
+        50% {
+        background: linear-gradient(-205deg, rgb(34, 34, 34), rgb(10, 10, 10));
+        }
+        60% {
+        background: linear-gradient(-169deg, rgb(32, 32, 32), rgb(10, 10, 10));
+        }
+        70% {
+        background: linear-gradient(-133deg, rgb(30, 30, 30), rgb(10, 10, 10));
+        }
+        80% {
+        background: linear-gradient(-97deg, rgb(28, 28, 28), rgb(10, 10, 10));
+        }
+        90% {
+        background: linear-gradient(-61deg, rgb(26, 26, 26), rgb(10, 10, 10));
+        }
+        100% {
+        background: linear-gradient(-25deg, rgb(24, 24, 24), rgb(10, 10, 10));
+        }
+        }
+        .card-info div {
+        border: 1.525px solid #282828;
+        width: 100%;
+        background-color: rgb(8, 8, 8);
+        padding: 5px;
+        }
+        .card-info div:first-child {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        }
+        .card-info div:nth-last-child(1) {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        }
+        .patch {
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        }
+        .patch img {
+        width: 100%;
+        }
+        abbr {
+        text-decoration: none;
+        cursor: help;
+        }
+        @media screen and (max-width:575px) {
+        h1 {
+        position: inherit !important;
+        }
+        }
+    </style>
+    <script src="../karty/card-database/card-stats/1.3.0/card-stats.js"></script>
+</head>
+<body>
+    <div id="header-mobile">
+        <img src="../assets/close.png" class="close-img" onclick="mobile_menu_close()" alt="Zamknij">
+        <div>
+            <h2>SOLDREC</h2>
+            <ul>
+                <li><a href="../karty">Karty</a></li>
+                <li><a href="../zasady">Zasady</a></li>
+                <li><a href="../aktualnosci">Aktualności</a></li>
+            </ul>
+        </div>
+        <div>
+            <h2>INFORMACJE</h2>
+            <ul>
+                <li><a href="../projekt">O Projekcie</a></li>
+                <li><a href="../kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+        <div onclick="random_card()">
+            <h2>LOSOWA KARTA</h2>
+            <ul>
+                <li><img src="../assets/random.png" id="random_mobile"></li>
+            </ul>
+        </div>
+    </div>
+    <main id="main">
+        <header class="header">
+            <a href="../karty"><img src="../assets/logo.png" id="logoimg"></a>
+            <ul>
+                <li><h2><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3227539990" id="graj" target="_blank"><i>GRAJ TERAZ</i></a></h2></li>
+                <li><a href="../karty">Karty</a></li>
+                <li><a href="../aktualnosci">Aktualności</a></li>
+            </ul>
+            <svg width="64" height="64" onclick="mobile_menu_open()" class="menu-button">
+                <rect width="56" height="8" x="0" y="8" fill="white" />
+                <rect width="56" height="8" x="0" y="28" fill="white" />
+                <rect width="56" height="8" x="0" y="48" fill="white" />
+            </svg>
+        </header>
+    </main>
+    <a onclick="ToTop()">
+        <img src="../assets/arrow.png" class="back-to-top" id="back_to_top">
+    </a>
+    <section>
+        <article>
+            <h1 style="position: sticky; top: -44px; z-index: 99;">Aktualizacja v1.4.0</h1>
+            <h3><i>20 grudnia 2025</i></h3>
+            <h2 style="margin-top: 128px;"><i>- INFORMACJE -</i></h2>
+            <div class="card-info">
+                <div>
+                <h2>STRESZCZENIE</h2>
+                </div>
+                <div>
+                <img src="../assets/updates/1.4.0.png" style="max-width: 100%;">
+                </div>
+            </div>
+            <h2 style="margin-top: 128px;"><i>- ZMIANY -</i></h2>
+            <div class="card-info">
+                <div>
+                <h2>NERFY</h2>
+                </div>
+                <div>
+                <h4>Dokładanie do Pieca</h4>
+                <div class="patch">
+                <img src="../assets/cards/1.1.0/akcje/66.webp">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/cards/latest/akcje/66.webp">
+                </div>
+                <div>
+                Frekwencja: <script>document.write(v1_3_0AkcjaCard66Popularity);</script>% talii
+                <br>
+                <abbr title="Delta = (% wygranych meczy z tą kartą) - 50%"><span style="border-bottom: 0.1rem dashed #FCFCFF;">Delta</span></abbr>: <script>document.write(v1_3_0AkcjaCard66Delta);</script>
+                <br>
+                Ta karta daje tak niesamowicie potężny bonus w pierwszych turach. Wybierając kolory typu niebieski czy żółty miażdży się early game.</div>
+                <div class="patch">
+                <h4>
+                KOSZT ZAGRYWANIA MANY | 7 >> 9
+                </h4>
+                </div>
+                <h4>Evader</h4>
+                <div class="patch">
+                <img src="../assets/cards/alpha/jednostki/67.webp">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/cards/latest/jednostki/67.webp">
+                </div>
+                <div>
+                Frekwencja: <script>document.write(v1_3_0JednostkaCard67Popularity);</script>% talii
+                <br>
+                <abbr title="Delta = (% wygranych meczy z tą kartą) - 50%"><span style="border-bottom: 0.1rem dashed #FCFCFF;">Delta</span></abbr>: <script>document.write(v1_3_0JednostkaCard67Delta);</script>
+                <br>
+                Zauważenie Evadera jako wrogiego operatora na początku gry wzbudzało złość u wielu graczy. Dlaczego? Otóż potrafił on w jedną turę unicestwić gracza z gry. Pozostali gracze nie byli problemem. Wydając dziesiątki monet na strzelenie w jednego gracza Evader zyskiwał tonę siły aby wykończyć innych. Innym graczom udało się usunąć Evadera z planszy? Haha. Wtedy on znowu robi to samo.</div>
+                <div class="patch">
+                <h4>
+                ZDROWIE ZYSKANE LUB STRACONE ZA Y MONET | 2*Y >> Y<br>
+                KOSZT ZAGRYWANIA MANY | 16 >> 18
+                </h4>
+                </div>
+                <h4>Ewenement</h4>
+                <div class="patch">
+                <img src="../assets/cards/1.3.0/akcje/26.webp">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/cards/latest/akcje/26.webp">
+                </div>
+                <div>
+                Frekwencja: <script>document.write(v1_3_0AkcjaCard26Popularity);</script>% talii
+                <br>
+                <abbr title="Delta = (% wygranych meczy z tą kartą) - 50%"><span style="border-bottom: 0.1rem dashed #FCFCFF;">Delta</span></abbr>: <script>document.write(v1_3_0AkcjaCard26Delta);</script>
+                <br>
+                Karta znana w społeczności jako symbol braku koleżeństwa i chamstwa. Widzisz twojego przyjaciela, który to zagrywa? Mam złe wieści...
+                <br>
+                Ta zmiana spowoduje, że karta rzeczywiście stanie się jakkolwiek zbalansowana. Stawka jest wysoka - nie możesz przegrać gry dopóki dana jednostka żyje, lecz gdy tylko przestanie ona żyć, przegrywasz.</div>
+                <div class="patch">
+                <h4>
+                PRZEGRANIE GRY PRZY STRACENIU JEDNOSTKI | NIE >> TAK
+                </h4>
+                </div>
+                <h4>JEDENASTKA</h4>
+                <div class="patch">
+                <img src="../assets/cards/1.1.0/akcje/114.webp">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/cards/latest/akcje/114.webp">
+                </div>
+                <div>
+                Frekwencja: <script>document.write(v1_3_0AkcjaCard114Popularity);</script>% talii
+                <br>
+                <abbr title="Delta = (% wygranych meczy z tą kartą) - 50%"><span style="border-bottom: 0.1rem dashed #FCFCFF;">Delta</span></abbr>: <script>document.write(v1_3_0AkcjaCard114Delta);</script>
+                <br>
+                Karta i tak już bardzo potężna, złagodzona w pierwszej turze. Na początku meczu każdy wróg i tak już jest zajęty swoją ekonomią i nie ma czasu na zajmowanie się innymi. A ty? Ty dobierasz sobie 3 karty na turę.</div>
+                <div class="patch">
+                <h4>
+                ZAPARCIE | NIE >> TAK
+                </h4>
+                </div>
+                <h4>LAST STAND</h4>
+                <div class="patch">
+                <img src="../assets/cards/1.1.0/akcje/48.webp">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/cards/latest/akcje/48.webp">
+                </div>
+                <div>
+                Frekwencja: <script>document.write(v1_3_0AkcjaCard48Popularity);</script>% talii
+                <br>
+                <abbr title="Delta = (% wygranych meczy z tą kartą) - 50%"><span style="border-bottom: 0.1rem dashed #FCFCFF;">Delta</span></abbr>: <script>document.write(v1_3_0AkcjaCard48Delta);</script>
+                <br>
+                Wszyscy wiemy, co robi ta karta w meczu. Ochrona na cokolwiek za marne 5 many. Od teraz Last Stand daje ochronę jedynie na aspekt walki.</div>
+                <div class="patch">
+                <h4>
+                ZWIĘKSZENIE MAX. ZDROWIA | 100 >> 0<br>
+                OCHRONA | ZAWSZE >> W WALCE<br>
+                KOSZT ZAGRYWANIA POPULARNOŚCI | 0 >> 5
+                </h4>
+                </div>
+                <h4>NAJWIĘKSZY SZTORM</h4>
+                <div class="patch">
+                <img src="../assets/cards/1.1.0/akcje/112.webp">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/cards/latest/akcje/112.webp">
+                </div>
+                <div>
+                Frekwencja: <script>document.write(v1_3_0AkcjaCard112Popularity);</script>% talii
+                <br>
+                <abbr title="Delta = (% wygranych meczy z tą kartą) - 50%"><span style="border-bottom: 0.1rem dashed #FCFCFF;">Delta</span></abbr>: <script>document.write(v1_3_0AkcjaCard112Delta);</script>
+                <br>
+                W przeciwieństwie do innych karcianek, w SOLDREC przegrywa się grę przy braku jednostek. Największy Sztorm eksceluje właśnie w tym. Oprócz tego nerfa, w każdej aktualizacji dodawane jest więcej Morskich jednostek.</div>
+                <div class="patch">
+                <h4>
+                KOSZT ZAGRYWANIA MANY | 10 >> 15
+                </h4>
+                </div>
+                <h4>SILNY WIATR</h4>
+                <div class="patch">
+                <img src="../assets/cards/1.3.0/akcje/63.webp">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/cards/latest/akcje/63.webp">
+                </div>
+                <div>
+                Frekwencja: <script>document.write(v1_3_0AkcjaCard63Popularity);</script>% talii
+                <br>
+                <abbr title="Delta = (% wygranych meczy z tą kartą) - 50%"><span style="border-bottom: 0.1rem dashed #FCFCFF;">Delta</span></abbr>: <script>document.write(v1_3_0AkcjaCard63Delta);</script>
+                <br>
+                Silny Wiatr tak właściwie przez pomyłkę nie miał Zaparcia, co powodowało starty gry, które po prostu były nie fair.</div>
+                <div class="patch">
+                <h4>
+                ZAPARCIE | NIE >> TAK
+                </h4>
+                </div>
+                <h4>SKKB</h4>
+                <div class="patch">
+                <img src="../assets/cards/1.3.0/jednostki/46.webp">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/cards/latest/jednostki/46.webp">
+                </div>
+                <div>
+                Frekwencja: <script>document.write(v1_3_0JednostkaCard46Popularity);</script>% talii
+                <br>
+                <abbr title="Delta = (% wygranych meczy z tą kartą) - 50%"><span style="border-bottom: 0.1rem dashed #FCFCFF;">Delta</span></abbr>: <script>document.write(v1_3_0JednostkaCard46Delta);</script>
+                <br>
+                To już tradycja. SKKB można bardzo łatwo zrównać z gruntem, lecz nie to jest celem. Celem jest zbalansowanie go.</div>
+                <div class="patch">
+                <h4>
+                ZASOBY WPŁACALNE | MANA, MONETY, ENDTURIA >> MANA<br>
+                KOSZT ZAGRYWANIA MANY | 14 >> 15
+                </h4>
+                </div>
+                <h4>STRZAŁ</h4>
+                <div class="patch">
+                <img src="../assets/cards/1.2.1/akcje/49.webp">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/cards/latest/akcje/49.webp">
+                </div>
+                <div>
+                Frekwencja: <script>document.write(v1_3_0AkcjaCard49Popularity);</script>% talii
+                <br>
+                <abbr title="Delta = (% wygranych meczy z tą kartą) - 50%"><span style="border-bottom: 0.1rem dashed #FCFCFF;">Delta</span></abbr>: <script>document.write(v1_3_0AkcjaCard49Delta);</script>
+                <br>
+                Strzał dalej terroryzował mecze z 2+ graczami. Od teraz jest zablokowany do działania po jednej stronie zamiast strzelać w różne wrogie jednostki mające po 1 życia.</div>
+                <div class="patch">
+                <h4>
+                WIELE STRON | TAK >> NIE<br>
+                KOSZT ZAGRYWANIA MANY | 6 >> 8
+                </h4>
+                </div>
+                <h4>TRUPIA LOTERIA</h4>
+                <div class="patch">
+                <img src="../assets/cards/1.1.0/akcje/73.webp">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/cards/latest/akcje/73.webp">
+                </div>
+                <div>
+                Frekwencja: <script>document.write(v1_3_0AkcjaCard73Popularity);</script>% talii
+                <br>
+                <abbr title="Delta = (% wygranych meczy z tą kartą) - 50%"><span style="border-bottom: 0.1rem dashed #FCFCFF;">Delta</span></abbr>: <script>document.write(v1_3_0AkcjaCard73Delta);</script>
+                <br>
+                Karta mająca 82% winrate absolutnie unicestwiała early game. Nerf ten może wydawać się lekki i nieznaczący, lecz czasami te 4 popularności tworzy ogromną różnicę.</div>
+                <div class="patch">
+                <h4>
+                KOSZT ZAGRYWANIA POPULARNOŚCI | 12 >> 16
+                </h4>
+                </div>
+                </div>
+            </div>
+            <div class="card-info">
+                <div>
+                <h2>BUFFY</h2>
+                </div>
+                <div>
+                <h4>ULTRABÓJSTWO</h4>
+                <div class="patch">
+                <img src="../assets/cards/1.1.0/akcje/9.webp">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/cards/latest/akcje/9.webp">
+                </div>
+                <div>
+                Frekwencja: <script>document.write(v1_3_0AkcjaCard9Popularity);</script>% talii
+                <br>
+                <abbr title="Delta = (% wygranych meczy z tą kartą) - 50%"><span style="border-bottom: 0.1rem dashed #FCFCFF;">Delta</span></abbr>: <script>document.write(v1_3_0AkcjaCard9Delta);</script>
+                <br>
+                Jest to jedna z najstarszych kart w historii SOLDREC i nie przetrwała ona próby czasu. 5 many i 5 popularności za 50:50 ulepszenie lub zdegradowanie to naprawdę słaby deal. W tej aktualizacji została dodana karta Knajpa, która po prostu byłaby lepsza od Ultrabójstwa.</div>
+                <div class="patch">
+                <h4>
+                KOSZT ZAGRYWANIA POPULARNOŚCI | 5 >> 3<br>
+                KOSZT ZAGRYWANIA MANY | 5 >> 3
+                </h4>
+                </div>
+                <h4>KOLIZJA</h4>
+                <div class="patch">
+                <img src="../assets/cards/1.3.0/akcje/155.webp">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/next.png" style="width: 48px; height: 48px; transform: rotate(180deg);">
+                <img src="../assets/cards/latest/akcje/155.webp">
+                </div>
+                <div>
+                Frekwencja: <script>document.write(v1_3_0AkcjaCard155Popularity);</script>% talii
+                <br>
+                <abbr title="Delta = (% wygranych meczy z tą kartą) - 50%"><span style="border-bottom: 0.1rem dashed #FCFCFF;">Delta</span></abbr>: <script>document.write(v1_3_0AkcjaCard155Delta);</script>
+                <br>
+                To jest de facto buff, lecz w praktyce jest to naprawienie luki polegającej na wyborze przez ofiarę już zajętej jednostki, negując efekt.</div>
+                <div class="patch">
+                <h4>
+                WYBIERANIE TYLKO NIEZAJĘTYCH JEDNOSTEK | NIE >> TAK
+                </h4>
+                </div>
+                </div>
+                </div>
+            <h2 style="margin-top: 128px;"><i>- NOWOŚCI -</i></h2>
+            <div class="card-info">
+                <div>
+                <h2>SYSTEMY</h2>
+                </div>
+                <div>
+                <h4>LICYTACJA</h4>
+                <div>
+                Ta mechanika pozwala wszystkim graczom po kolei licytować dany bonus o dany surowiec np. licytacja dobrania 3 kart o zdrowie. Odblokowywuje ona nowe śmieszne metody gry.</div>
+                <h4>NOWY TYP JEDNOSTKI - "SZARAK"</h4>
+                <div>
+                Szarak to najnowsza zmiana w sposobach budowy talii. Szaraki są podobne do Szefów czyli tzw. "Gwiazdek". Są one typem jednostki, który pozwala jednostkom na bycie w talii tak samo jak zwykłe jednostki, lecz Szaraki posiadają własne małe i typowe bonusy wspierające grę. Bonusy te to np. "Dobierz 1 kartę", "Zyskujesz 10 zdrowia" oraz wiele innych. Szaraki mogą być także operatorami.</div>
+                <h4>WYBÓR KOSZTU</h4>
+                <div>
+                Od teraz karty (na ten moment tylko jednostki) mogą mieć dzielone koszty. Oznacza to, że zagrywający może wybrać jeden z dwóch kosztów, który jest bardziej odpowiadający.</div>
+                </div>
+            </div>
+            </div>
+            <div class="card-info">
+                <div>
+                <h2>KARTY</h2>
+                </div>
+                <div class="cards">
+                    <a class="card" href="../karty/akcje/97">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/97.webp" alt="Inflacja Mocy">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/100">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/100.webp" alt="Kryształ Jedności">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/102">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/102.webp" alt="Dezynwoltura">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/103">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/103.webp" alt="Syfon">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/177">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/177.webp" alt="Nowy Krenowin">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/178">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/178.webp" alt="Na Pohybel">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/179">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/179.webp" alt="Knajpa">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/180">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/180.webp" alt="Praca">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/181">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/181.webp" alt="Hold Ring">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/182">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/182.webp" alt="Studnia Życzeń">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/183">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/183.webp" alt="Nowy Ład">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/184">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/184.webp" alt="Bolesna Eksplikacja">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/185">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/185.webp" alt="Duplikacja">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/186">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/186.webp" alt="Monumentalne Zadanie">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/187">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/187.webp" alt="Serwer Koparki">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/188">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/188.webp" alt="Demonstracja">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/189">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/189.webp" alt="Zmarniej">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/190">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/190.webp" alt="Zestaw Szpiegowski">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/191">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/191.webp" alt="Klucz Piećdziesięciu Wrót">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/192">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/192.webp" alt="Ślub">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/193">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/193.webp" alt="Ku Uciesze Gawiedzi">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/194">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/194.webp" alt="Teren Sporny">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/195">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/195.webp" alt="Eksplozja Makaraja">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/196">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/196.webp" alt="Aukcja">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/197">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/197.webp" alt="Przepychanka">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/198">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/198.webp" alt="Supremacja Suzila">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/199">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/199.webp" alt="Lokata">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/200">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/200.webp" alt="Kryształ Ciemności">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/201">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/201.webp" alt="Nawiedzenie">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/202">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/202.webp" alt="Paranoja">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/203">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/203.webp" alt="Południowa Trumna">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/204">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/204.webp" alt="Lakunarna Synestezja">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/205">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/205.webp" alt="Krwawy Księżyc">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/206">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/206.webp" alt="Szafirowy Księżyc">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/207">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/207.webp" alt="Bursztynowy Księżyc">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/208">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/208.webp" alt="Szmaragdowy Księżyc">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/209">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/209.webp" alt="Nieforsownia">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/210">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/210.webp" alt="Wejdź w Multiwersum">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/211">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/211.webp" alt="STOP">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/212">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/212.webp" alt="Obżarstwo">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/213">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/213.webp" alt="Niesłychane Skarby">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/akcje/214">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/akcje/214.webp" alt="Potyczka">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/74">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/74.webp" alt="Mr. Rodeo">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/146">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/146.webp" alt="Shiroktu">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/147">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/147.webp" alt="Astro Gofer">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/148">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/148.webp" alt="Oszuścik">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/149">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/149.webp" alt="Żółw Terrorysta">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/150">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/150.webp" alt="Armia Trójkątów">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/151">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/151.webp" alt="Anfidin">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/152">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/152.webp" alt="Alex">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/153">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/153.webp" alt="Demian">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/154">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/154.webp" alt="Paser">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/155">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/155.webp" alt="Znojniak">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/156">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/156.webp" alt="Izaja">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/157">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/157.webp" alt="Makarai">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/158">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/158.webp" alt="Maggenn z Tolimbu">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/159">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/159.webp" alt="Void">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/160">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/160.webp" alt="Dark Lord">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/161">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/161.webp" alt="Pan Roślinka">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/162">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/162.webp" alt="Oregon">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/163">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/163.webp" alt="Hellfire">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/164">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/164.webp" alt="Los Senno">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/165">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/165.webp" alt="Kondygant">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/166">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/166.webp" alt="Odźwierny Rzemykarz">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/167">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/167.webp" alt="Chytrus">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/168">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/168.webp" alt="Natasza Ami">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/169">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/169.webp" alt="Istota Dna">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/170">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/170.webp" alt="SOLDIER">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/171">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/171.webp" alt="Gizmo">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/172">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/172.webp" alt="Sara">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/173">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/173.webp" alt="Czarny Baron">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/174">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/174.webp" alt="Pustynny Ninja">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/175">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/175.webp" alt="Kuszi Diatenko">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/176">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/176.webp" alt="Lights Ami">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/177">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/177.webp" alt="Tronin">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/178">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/178.webp" alt="Earthstone">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/179">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/179.webp" alt="Nembik">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/180">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/180.webp" alt="!@#$%^">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/181">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/181.webp" alt="Mućka">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/182">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/182.webp" alt="Null">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/183">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/183.webp" alt="Brodiaga">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/184">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/184.webp" alt="ROgueBOT">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/185">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/185.webp" alt="Maria">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/186">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/186.webp" alt="Dźwiedź">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+            <div>
+                <h3>SOLDREC</h3>
+                <ul>
+                    <li><p><a href="../karty">Karty</a></p></li>
+                    <li><p><a href="../zasady">Zasady</a></p></li>
+                    <li><p><a href="../aktualnosci">Aktualności</a></p></li>
+                </ul>
+            </div>
+            <div>
+                <h3>INFORMACJE</h3>
+                <ul>
+                    <li><p><a href="../projekt">O Projekcie</a></p></li>
+                    <li><p><a href="../kontakt">Kontakt</a></p></li>
+                </ul>
+            </div>
+            <div>
+                <p>™ & © 2023-2025 Autorzy projektu SOLDREC. Wszelkie prawa zastrzeżone. Wszystkie treści audio, wizualne i tekstowe na tej stronie (w tym wszystkie nazwy, znaki, obrazy, historie, znaki towarowe i logo) są chronione znakami towarowymi, prawami autorskimi i innymi prawami własności intelektualnej należącymi ekskluzywnie do ich oryginalnych autorów lub ich spółek zależnych, licencjodawców, licencjobiorców, dostawców i kont.</p>
+            </div>
+    </footer>
+    <script src="../js/mobile-menu.js"></script>
+    <script src="../js/back-to-top.js"></script>
+    <script src="../js/random-card.js"></script>
+</body>
+</html>

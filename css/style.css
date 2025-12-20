@@ -224,7 +224,6 @@ footer ul li a:hover {
 }
 
 #logoimg {
-    height: 90px;
     width: 500px;
     border-radius: 0;
     padding: 1.5vh 10px 4px 10px;
@@ -242,7 +241,7 @@ footer ul li a:hover {
     }
 }
 
-@media screen and (max-width:550px) {
+@media screen and (max-width:575px) {
     article {
         width: 95%
     }

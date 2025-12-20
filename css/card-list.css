@@ -31,7 +31,7 @@ form {
     justify-content: center;
     text-align: center;
     position: sticky !important;
-    top: -8px;
+    top: -16px;
     z-index: 1;
     width: 75%;
     max-width: fit-content;
@@ -39,8 +39,7 @@ form {
 }
 
 form h3 {
-    color: rgb(191, 190, 223);
-    text-shadow: 0 1px 25px white;
+    text-shadow: 0 0 24px white;
 }
 
 form div {
@@ -48,7 +47,7 @@ form div {
 }
 
 #line {
-    border-left: 2px solid rgb(60, 55, 79);
+    border-left: 2px solid rgb(61, 56, 80);
 }
 
 #searchbox {
@@ -64,14 +63,14 @@ input {
     width: 350px;
     height: 40px;
     font-size: 1.2rem;
-    margin: 20px 20px;
+    margin: 20px 20px 20px -20px;
 }
 
 #search_clear {
     position: absolute;
     cursor: pointer;
     display: none;
-    right: 6.5%;
+    right: 7%;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -86,6 +85,10 @@ input {
     text-align: center;
     margin-bottom: 24px;
     color: rgb(192, 192, 192);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 1);
+    position: sticky !important;
+    top: 74px;
+    z-index: 1;
 }
 
 .cards {
@@ -134,6 +137,9 @@ input {
     form {
         position: static !important;
     }
+    #resultsnumber {
+        position: static !important;
+    }
 }
 
 @media screen and (max-width:925px) {
@@ -143,6 +149,9 @@ input {
     #line {
         border-left: none;
         margin-bottom: 18px;
+    }
+    input{
+        margin: 20px 20px;
     }
     #syntax {
         width: 90%;

@@ -6,7 +6,10 @@ function latest() {
     const card_type = "Akcja - NATYCH.";
     const card_description = `
         <p>
-        Każdy twój wróg wybiera jednostkę, której jest włodarzem. Te jednostki zostają zajęte.
+        Każdy twój wróg wybiera niezajętą jednostkę, której jest włodarzem.
+        </p>
+        <p>
+        Te jednostki zostają zajęte.
         </p>`;
     const card_flavor = `
         <i>
@@ -27,13 +30,52 @@ function latest() {
     document.getElementById("card_image").src = "../../assets/cards/latest/akcje/155.webp";
     document.getElementById("card_image").alt = card_title;
     document.getElementById("latest_selector").innerHTML = `&gt;<u>Najnowsza</u>`;
+    document.getElementById("v1_3_0_selector").innerHTML = `<u>v1.3.0</u>`;
+}
+function v1_3_0() {
+    const card_title = "Kolizja";
+    const site_title = card_title+" (v1.3.0)";
+    const card_cost = "5M 5P";
+    const card_cost_info = "5 Many i 5 Popularności";
+    const card_type = "Akcja - NATYCH.";
+    const card_description = `
+        <p>
+        Każdy twój wróg wybiera jednostkę, której jest włodarzem. Te jednostki zostają zajęte.
+        </p>`;
+    const card_flavor = `
+        <i>
+        Serutus sprowadził tu wiele person.
+        </i>`;
+    const card_author = `
+        <i>
+        Ilustracja: Fnold 2024
+        </i>`;
+    document.getElementById("card_title").innerHTML = card_title;
+    document.getElementById("site_title").innerHTML = site_title;
+    document.getElementById("card_cost").innerHTML = card_cost;
+    document.getElementById("card_cost_info").title = card_cost_info;
+    document.getElementById("card_type").innerHTML = card_type;
+    document.getElementById("card_description").innerHTML = card_description;
+    document.getElementById("card_flavor").innerHTML = card_flavor;
+    document.getElementById("card_author").innerHTML = card_author;
+    document.getElementById("card_image").src = "../../assets/cards/1.3.0/akcje/155.webp";
+    document.getElementById("card_image").alt = card_title;
+    document.getElementById("latest_selector").innerHTML = `<u>Najnowsza</u>`;
+    document.getElementById("v1_3_0_selector").innerHTML = `&gt;<u>v1.3.0</u>`;
 }
 document.addEventListener("DOMContentLoaded", latest);
 
-    const current_popularity = 50;
-    const current_delta = 0;
+    const card_id = (document.currentScript?.getAttribute('src') || '').match(/\/(\d+)(?=\.js(?:$|\?|#))/)?.[1];
+    const current_popularity = eval(`v1_3_0AkcjaCard${card_id}Popularity`);
+    const current_delta = eval(`v1_3_0AkcjaCard${card_id}Delta`);
     const ctxP = document.getElementById('chart_popularity');
     const ctxD = document.getElementById('chart_delta');
+    if (current_popularity == null) {
+        current_popularity = 0;
+    }
+    if (current_delta == null) {
+        current_delta = 0;
+    }
     document.getElementById("popularity").innerHTML = "&nbsp;"+current_popularity+"%&nbsp;";
     document.getElementById("delta").innerHTML = "&nbsp;"+current_delta+"&nbsp;";
     
@@ -72,12 +114,14 @@ document.addEventListener("DOMContentLoaded", latest);
         const yellow = [240, 240, 0];
         const green = [0, 192, 0];
         let Dcolor;
-        if (value <= -4.5) {
-            Dcolor = interpolateColor(red, orange, (value + 10) / 5);
-        } else if (value <= 4.5) {
-            Dcolor = interpolateColor(orange, yellow, (value + 5) / 10);
+        if (value <= -10) {
+            Dcolor = interpolateColor(red, orange, (value - (-40)) / (30));
+        } else if (value <= 10) {
+            Dcolor = interpolateColor(orange, yellow, (value - (-10)) / (20));
+        } else if (value <= 40) {
+            Dcolor = interpolateColor(yellow, green, (value - 10) / (30));
         } else {
-            Dcolor = interpolateColor(yellow, green, (value - 5) / 5);
+            Dcolor = green;
         }
         return 'rgb(' + Dcolor.join(',') + ')';
     }
@@ -90,10 +134,10 @@ document.addEventListener("DOMContentLoaded", latest);
     new Chart(ctxP, {
         type: 'line',
         data: {
-        labels: ['1.3.0'],
+        labels: ['1.3.0','1.4.0'],
         datasets: [{
             label: 'Frekwencja',
-            data: [current_popularity],
+            data: [(eval(`v1_3_0AkcjaCard${card_id}Popularity`))],
             borderWidth: 1,
             borderColor: '#FFC000',
             backgroundColor: '#FFC000'
@@ -131,10 +175,10 @@ document.addEventListener("DOMContentLoaded", latest);
     new Chart(ctxD, {
         type: 'line',
         data: {
-        labels: ['1.3.0'],
+        labels: ['1.3.0','1.4.0'],
         datasets: [{
             label: 'Delta',
-            data: [current_delta],
+            data: [(eval(`v1_3_0AkcjaCard${card_id}Delta`))],
             borderWidth: 1,
             borderColor: '#0094FF',
             backgroundColor: '#0094FF'
@@ -152,8 +196,8 @@ document.addEventListener("DOMContentLoaded", latest);
         },
         scales: {
             y: {
-            max: 10,
-            min: -10,
+            max: 50,
+            min: -50,
             grid: {
                 color: '#404040'
             },

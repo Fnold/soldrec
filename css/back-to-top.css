@@ -10,6 +10,7 @@
     cursor: pointer;
     display: block;
     transition: 0.5s;
+    z-index: 3;
 }
 
 .back-to-top:hover {
