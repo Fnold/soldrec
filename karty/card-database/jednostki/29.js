@@ -10,7 +10,7 @@ function latest() {
         </p>`;
     const card_stats = `
         <p>
-        5/5/7/5
+        5/5/6/5
         </p>`;
     const card_author = `
         <i>
@@ -27,6 +27,39 @@ function latest() {
     document.getElementById("card_image").src = "../../assets/cards/latest/jednostki/29.webp";
     document.getElementById("card_image").alt = card_title;
     document.getElementById("latest_selector").innerHTML = `&gt;<u>Najnowsza</u>`;
+    document.getElementById("v1_3_0_selector").innerHTML = `<u>v1.3.0</u>`;
+    document.getElementById("alpha_selector").innerHTML = `<u>Alpha</u>`;
+}
+function v1_3_0() {
+    const card_title = "Kret";
+    const site_title = card_title;
+    const card_cost = "9M 9P";
+    const card_cost_info = "9 Many i 9 Popularności";
+    const card_type = "Jednostka";
+    const card_subtype = `
+        <p>
+        Człowiek
+        </p>`;
+    const card_stats = `
+        <p>
+        5/5/7/5
+        </p>`;
+    const card_author = `
+        <i>
+        Ilustracja: Soldin 2020
+        </i>`;
+    document.getElementById("card_title").innerHTML = card_title;
+    document.getElementById("site_title").innerHTML = site_title;
+    document.getElementById("card_cost").innerHTML = card_cost;
+    document.getElementById("card_cost_info").title = card_cost_info;
+    document.getElementById("card_type").innerHTML = card_type;
+    document.getElementById("card_subtype").innerHTML = card_subtype;
+    document.getElementById("card_stats").innerHTML = card_stats;
+    document.getElementById("card_author").innerHTML = card_author;
+    document.getElementById("card_image").src = "../../assets/cards/1.3.0/jednostki/29.webp";
+    document.getElementById("card_image").alt = card_title;
+    document.getElementById("latest_selector").innerHTML = `<u>Najnowsza</u>`;
+    document.getElementById("v1_3_0_selector").innerHTML = `&gt;<u>v1.3.0</u>`;
     document.getElementById("alpha_selector").innerHTML = `<u>Alpha</u>`;
 }
 function alpha() {
@@ -58,6 +91,7 @@ function alpha() {
     document.getElementById("card_image").src = "../../assets/cards/alpha/jednostki/29.webp";
     document.getElementById("card_image").alt = card_title;
     document.getElementById("latest_selector").innerHTML = `<u>Najnowsza</u>`;
+    document.getElementById("v1_3_0_selector").innerHTML = `<u>v1.3.0</u>`;
     document.getElementById("alpha_selector").innerHTML = `&gt;<u>Alpha</u>`;
 }
 document.addEventListener("DOMContentLoaded", latest);
