@@ -10,7 +10,7 @@ function latest() {
         </p>`;
     const card_stats = `
         <p>
-        9/9/0/9
+        9/9/1/9
         </p>`;
     const card_author = `
         <i>
