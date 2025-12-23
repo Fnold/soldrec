@@ -3,10 +3,10 @@ function latest() {
     const site_title = card_title;
     const card_cost = "4C 10P";
     const card_cost_info = "4 Monety i 10 Popularności";
-    const card_type = "Akcja - NATYCH.";
+    const card_type = "Akcja";
     const card_description = `
         <p>
-        Nasyć wszystkie wystawione jednostki ze statusem NAGRODY: "Gdy ta jednostka zginie to jej włodarz odrzuca 1 kartę."
+        Za każdym razem, gdy wroga jednostka z wyznaczoną NAGRODĄ umiera, jej włodarz odrzuca 1 kartę.
         </p>`;
     const card_author = `
         <i>
