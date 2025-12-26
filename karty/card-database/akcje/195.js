@@ -1,5 +1,5 @@
 function latest() {
-    const card_title = "Teren Sporny";
+    const card_title = "Eksplozja Makaraja";
     const site_title = card_title;
     const card_cost = "10M";
     const card_cost_info = "10 Many";
