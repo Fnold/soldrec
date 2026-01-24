@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SK5SVWXJ58"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SK5SVWXJ58');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLDREC - NIEUMARLI kontra KONSYLIARZE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/card-list.css">
+    <link rel="stylesheet" href="../css/back-to-top.css">
+    <link rel="icon" href="../assets/favicon.ico">
+    <meta property="og:url" content="https://fnold.github.io/soldrec">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SOLDREC 1.4.0">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://fnold.github.io/soldrec/assets/updates/1.4.0.png">
+    <style>
+        .card-info {
+        width: 100%;
+        padding: 20px 15px;
+        margin-top: 32px;
+        margin-bottom: 16px;
+        border-radius: 16px;
+        border: 3.5px solid rgb(31, 31, 31);
+        background: linear-gradient(-25deg, rgb(24, 24, 24), rgb(10, 10, 10));
+        animation-name: background_animation;
+        animation-duration: 0.55s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+        }
+        @keyframes background_animation {
+        0% {
+        background: linear-gradient(-360deg, rgb(44, 44, 44), rgb(10, 10, 10));
+        }
+        10% {
+        background: linear-gradient(-349deg, rgb(42, 42, 42), rgb(10, 10, 10));
+        }
+        20% {
+        background: linear-gradient(-313deg, rgb(40, 40, 40), rgb(10, 10, 10));
+        }
+        30% {
+        background: linear-gradient(-277deg, rgb(38, 38, 38), rgb(10, 10, 10));
+        }
+        40% {
+        background: linear-gradient(-241deg, rgb(36, 36, 36), rgb(10, 10, 10));
+        }
+        50% {
+        background: linear-gradient(-205deg, rgb(34, 34, 34), rgb(10, 10, 10));
+        }
+        60% {
+        background: linear-gradient(-169deg, rgb(32, 32, 32), rgb(10, 10, 10));
+        }
+        70% {
+        background: linear-gradient(-133deg, rgb(30, 30, 30), rgb(10, 10, 10));
+        }
+        80% {
+        background: linear-gradient(-97deg, rgb(28, 28, 28), rgb(10, 10, 10));
+        }
+        90% {
+        background: linear-gradient(-61deg, rgb(26, 26, 26), rgb(10, 10, 10));
+        }
+        100% {
+        background: linear-gradient(-25deg, rgb(24, 24, 24), rgb(10, 10, 10));
+        }
+        }
+        .card-info div {
+        border: 1.525px solid #282828;
+        width: 100%;
+        background-color: rgb(8, 8, 8);
+        padding: 5px;
+        }
+        .card-info div:first-child {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        }
+        .card-info div:nth-last-child(1) {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        }
+        .patch {
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        }
+        .patch img {
+        width: 100%;
+        }
+        abbr {
+        text-decoration: none;
+        cursor: help;
+        }
+        @media screen and (max-width:575px) {
+        h1 {
+        position: inherit !important;
+        }
+        }
+    </style>
+    <script src="../karty/card-database/card-stats/1.3.0/card-stats.js"></script>
+</head>
+<body>
+    <div id="header-mobile">
+        <img src="../assets/close.png" class="close-img" onclick="mobile_menu_close()" alt="Zamknij">
+        <div>
+            <h2>SOLDREC</h2>
+            <ul>
+                <li><a href="../karty">Karty</a></li>
+                <li><a href="../zasady">Zasady</a></li>
+                <li><a href="../aktualnosci">Aktualności</a></li>
+            </ul>
+        </div>
+        <div>
+            <h2>INFORMACJE</h2>
+            <ul>
+                <li><a href="../projekt">O Projekcie</a></li>
+                <li><a href="../kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+        <div onclick="random_card()">
+            <h2>LOSOWA KARTA</h2>
+            <ul>
+                <li><img src="../assets/random.png" id="random_mobile"></li>
+            </ul>
+        </div>
+    </div>
+    <main id="main">
+        <header class="header">
+            <a href="../karty"><img src="../assets/logo.png" id="logoimg"></a>
+            <ul>
+                <li><h2><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3227539990" id="graj" target="_blank"><i>GRAJ TERAZ</i></a></h2></li>
+                <li><a href="../karty">Karty</a></li>
+                <li><a href="../aktualnosci">Aktualności</a></li>
+            </ul>
+            <svg width="64" height="64" onclick="mobile_menu_open()" class="menu-button">
+                <rect width="56" height="8" x="0" y="8" fill="white" />
+                <rect width="56" height="8" x="0" y="28" fill="white" />
+                <rect width="56" height="8" x="0" y="48" fill="white" />
+            </svg>
+        </header>
+    </main>
+    <a onclick="ToTop()">
+        <img src="../assets/arrow.png" class="back-to-top" id="back_to_top">
+    </a>
+    <section>
+        <article>
+            <h1 style="z-index: 99;">NIEUMARLI kontra KONSYLIARZE</h1>
+            <h3><i>25 stycznia 2026 - 1 czerwca 2026</i></h3>
+            <h2 style="margin-top: 128px;"><i>- INFORMACJE -</i></h2>
+            <div class="card-info">
+                <div>
+                <h2>STRESZCZENIE</h2>
+                </div>
+                <div>
+                NIEUMARLI kontra KONSYLIARZE to pierwsze wydarzenie w historii SOLDREC. Siły zła, śmierci i choroby toczą walkę z siłami dobra, życia i zdrowia. Każdy jeden wygrany mecz operatorem po wybranej stronie doda 1 głos do danej strony konfliktu. Głosy zbierane są do 1 czerwca 2026. Strony operatorów można zobaczyć poniżej. Zachęcane jest rozpowszechnianie plakatu twojej ulubionej drużyny!<br>Wygrana strona otrzyma następujące nagrody:
+                <br><br>
+                <span style="color: #FB0000">NIEUMARLI</span>:
+                <br>
+                - Akcja zdejmująca wiele zdrowia za jednym zamachem
+                <br>
+                - Karta z domeną Nieumarłych
+                <br>
+                - Specjalna mechanika o tematyce szkody
+                <br>
+                - Conajmniej 5 kart z czerwonym Oddaniem w przyszłej aktualizacji
+                <br>
+                - Żadnych kart z zielonym Oddaniem w przyszłej aktualizacji
+                <br>
+                - Wieczne prawo do przechwałek
+                <br><br>
+                <span style="color: #00D168">KONSYLIARZE</span>:
+                <br>
+                - Akcja dodająca wiele zdrowia za jednym zamachem
+                <br>
+                - Karta z domeną Ludzi
+                <br>
+                - Specjalna mechanika o tematyce wzmocnienia
+                <br>
+                - Conajmniej 5 kart z zielonym Oddaniem w przyszłej aktualizacji
+                <br>
+                - Żadnych kart z czerwonym Oddaniem w przyszłej aktualizacji
+                <br>
+                - Wieczne prawo do przechwałek
+                </div>
+            </div>
+            <h2 style="margin-top: 128px;"><i>- PLAKATY -</i></h2>
+            <div class="card-info">
+                <div>
+                <div class="patch">
+                <img src="../assets/nkk/nieumarli.png">
+                <h4>VS</h4>
+                <img src="../assets/nkk/konsyliarze.png">
+                </div>
+                </div>
+            </div>
+            <h2 style="margin-top: 128px;"><i>- STRONY -</i></h2>
+            <div class="card-info">
+                <div>
+                <h2>NIEUMARLI</h2>
+                </div>
+                <div class="cards">
+                    <a class="card" href="../karty/jednostki/34">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/34.webp" alt="El Pomidoro">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/38">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/38.webp" alt="02">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/39">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/39.webp" alt="Łucznik">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/40">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/40.webp" alt="Prowadząca">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/45">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/45.webp" alt="Jegomość">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/48">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/48.webp" alt="Tarking">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/51">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/51.webp" alt="Larja">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/54">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/54.webp" alt="Pudaka Soyo">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/57">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/57.webp" alt="Hondum">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/64">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/64.webp" alt="Czerwony Stwórca">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/66">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/66.webp" alt="Wielki Knur">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/67">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/67.webp" alt="Evader">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/69">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/69.webp" alt="Floda">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/72">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/72.webp" alt="El Rasisto">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/75">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/75.webp" alt="Scolder">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/85">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/85.webp" alt="Herbert">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/86">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/86.webp" alt="Rycerz 1">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/87">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/87.webp" alt="Diabeł">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/91">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/91.webp" alt="Stwórcyzm">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/92">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/92.webp" alt="Piroman Cham">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/95">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/95.webp" alt="Serutus">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/97">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/97.webp" alt="Raptowński Spamer">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/98">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/98.webp" alt="Ebenezer IX">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/107">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/107.webp" alt="Korm">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/119">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/119.webp" alt="Yagami">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/125">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/125.webp" alt="Carbo'">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/128">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/128.webp" alt="Franklin">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/145">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/145.webp" alt="Xopin">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/148">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/148.webp" alt="Oszuścik">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/149">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/149.webp" alt="Żółw Terrorysta">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/154">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/154.webp" alt="Paser">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/155">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/155.webp" alt="Znojniak">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/159">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/159.webp" alt="Void">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/160">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/160.webp" alt="Dark Lord">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/168">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/168.webp" alt="Natasza Ami">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/170">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/170.webp" alt="SOLDIER">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/173">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/173.webp" alt="Czarny Baron">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/174">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/174.webp" alt="Pustynny Ninja">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/175">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/175.webp" alt="Kuszi Diatenko">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/176">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/176.webp" alt="Lights Ami">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/180">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/180.webp" alt="!@#$%^">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/182">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/182.webp" alt="Null">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="card-info">
+                <div>
+                <h2>KONSYLIARZE</h2>
+                </div>
+                <div class="cards">
+                    <a class="card" href="../karty/jednostki/35">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/35.webp" alt="Mag 73">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/36">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/36.webp" alt="Omi Raus">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/37">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/37.webp" alt="SoldStudio">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/44">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/44.webp" alt="Mędrzec">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/46">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/46.webp" alt="SKKB">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/50">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/50.webp" alt="Nauczyciel">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/52">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/52.webp" alt="Hoplita">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/53">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/53.webp" alt="Krol">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/59">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/59.webp" alt="Konował">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/61">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/61.webp" alt="Mike">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/62">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/62.webp" alt="Posuwacz">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/65">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/65.webp" alt="Barman">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/68">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/68.webp" alt="Debil 3">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/71">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/71.webp" alt="Prof. Dr. Hab. Doktor Doktoriusz">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/74">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/74.webp" alt="Mr. Rodeo">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/81">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/81.webp" alt="Wolfe">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/90">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/90.webp" alt="Robot">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/106">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/106.webp" alt="William">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/108">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/108.webp" alt="Jankowski">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/114">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/114.webp" alt="Dziadek Półn. Lipinu">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/118">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/118.webp" alt="Dzieciak">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/120">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/120.webp" alt="Jelena">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/123">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/123.webp" alt="Zuzia">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/129">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/129.webp" alt="Konsyliarz">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/136">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/136.webp" alt="Irczysław Kositrawa">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/137">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/137.webp" alt="Ludwig">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/139">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/139.webp" alt="Ignis">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/142">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/142.webp" alt="Facemelter">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/143">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/143.webp" alt="Greg">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/144">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/144.webp" alt="Uzbek">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/147">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/147.webp" alt="Astro Gofer">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/150">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/150.webp" alt="Armia Trójkątów">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/151">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/151.webp" alt="Anfidin">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/156">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/156.webp" alt="Izaja">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/157">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/157.webp" alt="Makarai">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/161">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/161.webp" alt="Pan Roślinka">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/162">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/162.webp" alt="Oregon">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/163">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/163.webp" alt="Hellfire">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/166">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/166.webp" alt="Odźwierny Rzemykarz">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/177">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/177.webp" alt="Tronin">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/178">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/178.webp" alt="Earthstone">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/179">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/179.webp" alt="Nembik">
+                        </div>
+                    </a>
+                    <a class="card" href="../karty/jednostki/181">
+                        <div class="card">
+                            <img loading="lazy" src="../assets/cards/latest/jednostki/181.webp" alt="Mućka">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+            <div>
+                <h3>SOLDREC</h3>
+                <ul>
+                    <li><p><a href="../karty">Karty</a></p></li>
+                    <li><p><a href="../zasady">Zasady</a></p></li>
+                    <li><p><a href="../aktualnosci">Aktualności</a></p></li>
+                </ul>
+            </div>
+            <div>
+                <h3>INFORMACJE</h3>
+                <ul>
+                    <li><p><a href="../projekt">O Projekcie</a></p></li>
+                    <li><p><a href="../kontakt">Kontakt</a></p></li>
+                </ul>
+            </div>
+            <div>
+                <p>™ & © 2023-2025 Autorzy projektu SOLDREC. Wszelkie prawa zastrzeżone. Wszystkie treści audio, wizualne i tekstowe na tej stronie (w tym wszystkie nazwy, znaki, obrazy, historie, znaki towarowe i logo) są chronione znakami towarowymi, prawami autorskimi i innymi prawami własności intelektualnej należącymi ekskluzywnie do ich oryginalnych autorów lub ich spółek zależnych, licencjodawców, licencjobiorców, dostawców i kont.</p>
+            </div>
+    </footer>
+    <script src="../js/mobile-menu.js"></script>
+    <script src="../js/back-to-top.js"></script>
+    <script src="../js/random-card.js"></script>
+</body>
+</html>
