@@ -95,6 +95,9 @@
         .patch img {
         width: 100%;
         }
+        #days-left{
+            font-size: 75%; 
+        }
         @media screen and (max-width:575px) {
         h1 {
         position: inherit !important;
@@ -149,6 +152,7 @@
         <article>
             <h1 style="position: sticky; top: -44px; z-index: 99;">Aktualizacja v1.3.0</h1>
             <h3><i>20 kwietnia 2025</i></h3>
+            <h3><i id="days-left"></i></h3>
             <h2 style="margin-top: 128px;"><i>- INFORMACJE -</i></h2>
             <div class="card-info">
                 <div>
@@ -647,5 +651,10 @@
     <script src="../js/mobile-menu.js"></script>
     <script src="../js/back-to-top.js"></script>
     <script src="../js/random-card.js"></script>
+    <script>
+        const final = new Date(1745136000000);
+        const curdate = new Date();
+        document.getElementById("days-left").innerHTML = parseInt((curdate-final)/86400000)+" dni temu";
+    </script>
 </body>
 </html>
